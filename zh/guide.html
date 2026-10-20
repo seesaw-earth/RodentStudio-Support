@@ -1,1 +1,629 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="从导入视频到科研结果复核与导出的基本步骤。"><meta name="theme-color" content="#e9f9f7"><title>使用指南 · RodentStudio</title><link rel="canonical" href="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html"><link rel="alternate" hreflang="en" href="https://seesaw-earth.github.io/RodentStudio-Support/guide.html"><link rel="alternate" hreflang="zh-CN" href="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html"><link rel="icon" href="../assets/favicon.png" type="image/png"><link rel="stylesheet" href="../assets/styles.css"><meta property="og:type" content="website"><meta property="og:title" content="使用指南 | RodentStudio"><meta property="og:description" content="从导入视频到科研结果复核与导出的基本步骤。"><meta property="og:url" content="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html"><meta property="og:image" content="https://seesaw-earth.github.io/RodentStudio-Support/assets/app-icon.png"></head><body><a class="skip-link" href="#main">跳转到正文</a><header class="nav-wrap"><nav class="nav shell" aria-label="主导航"><a class="brand" href="../index.html"><img src="../assets/app-icon.png" alt="RodentStudio" width="40" height="40"> RodentStudio</a><div class="links"><a href="index.html">首页</a><a href="guide.html" aria-current="page">使用指南</a><a href="support.html">支持</a><a href="privacy.html">隐私政策</a><a href="faq.html">常见问题</a><a class="language" href="../guide.html" lang="en">EN</a></div></nav></header><main id="main"><section class="page-head"><div class="shell"><div class="eyebrow">开始使用 RodentStudio</div><h1>使用指南</h1><p>从导入视频到科研结果复核与导出的基本步骤。</p></div></section><article class="article shell"><p>RodentStudio 是原生 macOS 小鼠行为视频分析软件，用于组织实验、视频追踪、逐帧复核与科研结果导出。它是 Mac 桌面软件，不是 iPhone App。</p><h2>基本使用流程</h2><ol><li><strong>新建任务：</strong>选择受支持的行为学任务，填写实验设置和备注。</li><li><strong>导入视频：</strong>选择本地 MP4 或 MOV 视频，确认动物编号、日期、实验次数；按需添加分组等信息。</li><li><strong>完成标定：</strong>按任务设置场地边界、尺寸参照、兴趣区域或分析时间段。</li><li><strong>运行分析：</strong>选择相应流程进行跟踪；不同任务支持的模型和输出并不相同。</li><li><strong>人工复核：</strong>查看轨迹或关键点叠加、标记可疑帧并核对结果。</li><li><strong>导出数据：</strong>导出该流程支持的结构化结果、图表和复核文件。</li></ol><h2>分析模块</h2><div class="mini-list"><div><strong>RodentPose</strong><span>使用 MousePose6 的受支持单鼠姿态跟踪任务。</span></div><div><strong>RodentLimb</strong><span>使用 CylinderMousePoseV2 的受支持肢体运动任务。</span></div><div><strong>RodentFlow</strong><span>使用传统质心追踪的部分行为指标，当前该跟踪路线不依赖神经网络。</span></div><div><strong>实验数据层级</strong><span>任务、分组、动物、单次实验，支持备注和导出。</span></div></div><h2>科研数据管理</h2><p>建议完整记录物种、视角、标定、模型、分组、分析时间段和排除依据。统计结果应结合正确的实验单位与独立统计方案使用。</p><div class="notice"><strong>科研验证：</strong>本软件是辅助分析工具。用于论文或重要决策前，应与人工标注或经过验证的参考数据核对姿态追踪、事件分类、标定及统计指标；不同任务支持程度不同。</div><h2>系统与模型</h2><p>项目配置的最低部署系统为 macOS 14。计划通过 Mac App Store 发布的安装包应内置受支持的 Core ML 模型，普通用户不应需要安装 Python 或下载模型权重；正式版本仍需完成打包和设备测试。</p><p>独立的<a href="https://github.com/seesaw-earth/RodentStudio-CoreML-Models" target="_blank" rel="noopener noreferrer">Core ML 模型仓库</a>用于开发者分发模型。仓库中的第三个 JABS 模型目前不能据此认定已接入 RodentStudio Mac App。</p><h2>需要帮助？</h2><p>查看<a href="faq.html">常见问题</a>或<a href="support.html">支持页面</a>。</p></article></main><footer class="footer"><div class="shell footer-grid"><div><strong>RodentStudio</strong><div><small>© 2026 Ziqing Shi · 开发者：Ziqing Shi</small></div><div><small>独立科研分析软件；科研结果使用前应进行验证。</small></div></div><div class="footer-links"><a href="support.html">支持</a><a href="privacy.html">隐私</a><a href="legal.html">条款与声明</a><a href="accessibility.html">无障碍支持</a></div></div></footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="RodentStudio 完整使用指南（Mac、iPhone、iPad）：拍摄建议、任务、标定、追踪、复核、组间比较、导出、多格悬尾实验评分与常见问题排查。">
+<meta name="theme-color" content="#e9f9f7">
+<title>使用指南 · RodentStudio</title>
+<link rel="canonical" href="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html">
+<link rel="alternate" hreflang="en" href="https://seesaw-earth.github.io/RodentStudio-Support/guide.html">
+<link rel="alternate" hreflang="zh-CN" href="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html">
+<link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="../assets/styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="使用指南 | RodentStudio">
+<meta property="og:description" content="从原始行为学视频到经过复核、可导出的结果——Mac、iPhone 与 iPad。">
+<meta property="og:url" content="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html">
+<meta property="og:image" content="https://seesaw-earth.github.io/RodentStudio-Support/assets/app-icon.png">
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="nav-wrap"><nav class="nav shell" aria-label="主导航"><a class="brand" href="index.html"><img src="../assets/app-icon.png" alt="RodentStudio" width="40" height="40"> RodentStudio</a><div class="links"><a href="index.html">首页</a><a href="guide.html" aria-current="page">使用指南</a><a href="support.html">支持</a><a href="privacy.html">隐私政策</a><a href="faq.html">常见问题</a><a class="language" href="../guide.html" lang="en">EN</a></div></nav></header>
+<main id="main">
+<section class="page-head"><div class="shell"><div class="eyebrow">开始使用 RodentStudio</div><h1>使用指南</h1><p>从原始行为学视频到经过复核、可直接导出的结果——Mac、iPhone 与 iPad 通用。写给更想做实验、不想啃说明书的你。</p></div></section>
+<article class="article shell">
+
+<div class="guide-meta"><span class="badge mac">Mac · 0.7.1</span><span class="badge ios">iPhone 与 iPad · 1.0</span><span class="badge warn">准备发布中</span></div>
+
+<p id="top"><strong>第一次使用？</strong>先读<a href="#before-recording">拍摄之前</a>（5 分钟，可省下之后好几个小时），再按<a href="#quick-start">快速上手</a>操作。其余内容都是参考资料，需要时再查即可。English readers: <a href="../guide.html" lang="en">read the English guide</a>.</p>
+
+<nav class="toc" aria-label="本页目录">
+<strong>本页目录</strong>
+<ol>
+<li><a href="#at-a-glance">概览：我该用哪个版本？</a></li>
+<li><a href="#before-recording">拍摄之前</a></li>
+<li><a href="#concepts">理解这五点，用起来更顺手</a></li>
+<li><a href="#quick-start">Mac 快速上手（10 步）</a></li>
+<li><a href="#mac">Mac：完整流程</a></li>
+<li><a href="#tst">多格悬尾实验（TST）</a></li>
+<li><a href="#compare">组间比较与统计</a></li>
+<li><a href="#exports">导出文件说明</a></li>
+<li><a href="#ios">iPhone 与 iPad</a></li>
+<li><a href="#assays">实验范式速查</a></li>
+<li><a href="#good-practice">让结果经得起检验</a></li>
+<li><a href="#data">数据存放位置、备份与隐私</a></li>
+<li><a href="#shortcuts">键盘快捷键</a></li>
+<li><a href="#troubleshooting">常见问题排查</a></li>
+<li><a href="#build">从源码编译（进阶）</a></li>
+<li><a href="#reading">延伸阅读与相关工具</a></li>
+<li><a href="#help">获取帮助</a></li>
+</ol>
+</nav>
+
+<!-- ============================================================ -->
+<h2 id="at-a-glance">1. 概览：我该用哪个版本？</h2>
+<p>RodentStudio 在你自己的设备上分析<strong>你自己拍摄（或有权使用）的实验啮齿类视频</strong>。无需注册账号，也不会上传：视频、追踪数据和结果都留在你的 Mac、iPhone 或 iPad 上（详见<a href="privacy.html">隐私政策</a>）。它有两个版本，科研计算逻辑相同，但面向的工作场景不同。</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th scope="col"></th><th scope="col">RodentStudio（Mac 版）</th><th scope="col">RodentStudio Mobile（iPhone / iPad）</th></tr></thead>
+<tbody>
+<tr><th scope="row">适合</th><td>完整课题：多只动物、多个分组、多次实验、统计和批量导出</td><td>单段视频快速分析、在实验台旁检查录像、教学演示</td></tr>
+<tr><th scope="row">系统要求</th><td>macOS 14 Sonoma 或更新（推荐 Apple 芯片）</td><td>iOS / iPadOS 17 或更新</td></tr>
+<tr><th scope="row">分析模块</th><td>RodentPose（16 个范式）、RodentLimb（3 个）、RodentFlow（10 个）、多格 TST</td><td>RodentPose（16 个范式）</td></tr>
+<tr><th scope="row">数据组织</th><td>项目 → 任务 → 分组 → 小鼠 → 实验</td><td>每段视频一次分析，含编号、组别、阶段、天、试次</td></tr>
+<tr><th scope="row">组间统计</th><td>内置“组间比较”（t 检验、方差分析、混合方差分析、非参数检验）</td><td>导出汇总表后在其他软件中分析</td></tr>
+<tr><th scope="row">导出</th><td>实验 / 分组 / 任务级表格、图表、方法说明、DeepLabCut 格式逐帧数据、TST 专用文件</td><td>指标汇总 CSV、逐帧分析 CSV、原始关键点 CSV、完整报告 JSON、汇总表</td></tr>
+</tbody></table></div>
+
+<h3 id="check-device">查看你的设备</h3>
+<ul>
+<li>我的 Mac 是哪个 macOS？<a href="https://support.apple.com/zh-cn/109033" target="_blank" rel="noopener noreferrer">Apple：查看你的 Mac 正在使用哪个 macOS</a></li>
+<li>Apple 芯片还是 Intel？<a href="https://support.apple.com/zh-cn/116943" target="_blank" rel="noopener noreferrer">Apple：搭载 Apple 芯片的 Mac 电脑</a>。两者都在支持范围内；Apple 芯片运行 Core ML 模型快得多，长视频会更快完成。</li>
+<li>我的 iPhone / iPad 是哪个系统版本？<a href="https://support.apple.com/zh-cn/109065" target="_blank" rel="noopener noreferrer">Apple：查找 iPhone 或 iPad 上的软件版本</a></li>
+</ul>
+
+<h3 id="get-app">获取 App</h3>
+<p>RodentStudio 目前<strong>正在准备发布</strong>。上架后，下载链接会更新在<a href="index.html">首页</a>和<a href="updates.html">版本说明</a>中，请勿相信其他网站提供的下载链接。希望现在就自行编译的研究者可参阅<a href="#build">从源码编译</a>。分析视频<strong>不需要</strong> Python、GitHub 账号或联网——模型已经内置在 App 中。</p>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="before-recording">2. 拍摄之前</h2>
+<p>大多数“软件算错了”其实是拍摄问题。花十分钟把相机摆好，能省下好几个小时的重新分析。</p>
+
+<h3>相机与光照检查清单</h3>
+<ol>
+<li><strong>固定相机。</strong>使用三脚架或支架；同一批实验中不要变焦、转动或碰到相机。只要相机不动，标定一次就能用于所有视频。</li>
+<li>旷场类和迷宫类实验<strong>尽量从正上方俯拍</strong>，画面包含<strong>整个场地</strong>并留出一点余量（高架十字迷宫四周要留空间，让小鼠探头时鼻尖仍在画面内）。</li>
+<li><strong>光照均匀柔和</strong>，地面上不要有硬阴影或反光。灰度或红外视频效果很好；姿态类任务默认会先转灰度再识别。</li>
+<li><strong>对比度：</strong>深色小鼠配浅色底面（或反之）追踪效果最好。</li>
+<li><strong>帧率：</strong>大多数范式 25–30 fps 即可。步态分析请从透明步道下方以<strong>≥ 60 fps</strong> 拍摄。快速的头部动作（VTE、探头）建议逐帧识别。</li>
+<li><strong>每段视频一只动物</strong>，<a href="#tst">多格 TST</a> 流程除外（多只小鼠并排悬挂）。“双鼠社交互动”在 iPhone/iPad 上可追踪两只鼠；Mac 版目前该范式只追踪一只。</li>
+</ol>
+
+<h3>各范式的拍摄视角</h3>
+<ul>
+<li><strong>悬尾实验（RodentLimb，单鼠）：</strong>从正面或背面拍摄悬挂的小鼠，两只后爪都要可见；悬挂时开始录像；标准测试时长 6 分钟。</li>
+<li><strong>多格 TST：</strong>相机固定并正对装置，所有格子都在画面内；锁定曝光，避免亮度闪烁；易爬尾的品系（如 C57BL/6）请使用防爬装置。</li>
+<li><strong>圆筒实验：</strong>透过透明底面仰拍效果最好；侧拍也可以，需标定地面线。每只鼠 5–10 分钟。</li>
+<li><strong>步态：</strong>从下方（腹侧）拍摄直的步道；在画面中放一次标尺，用于厘米标定。</li>
+<li><strong>旋转行为：</strong>如透过透明底面拍摄，请在参数中打开“从下方拍摄（画面左右镜像）”。</li>
+</ul>
+
+<h3>文件格式与命名</h3>
+<ul>
+<li>使用普通的 <strong>MP4 或 MOV</strong>（H.264 或 HEVC 编码）。如果某个文件打不开，可用免费的 <a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">HandBrake</a> 转成 H.264 MP4。</li>
+<li><strong>文件名建议为 <code>小鼠编号_YYYY-MM-DD</code></strong>，例如 <code>M01_2026-10-17.mp4</code>。Mac 版会从文件名读取日期（支持 <code>2026-10-17</code>、<code>2026_10_17</code>、<code>2026.10.17</code>、<code>20261017</code>），去掉日期后剩下的部分作为小鼠编号，导入表格几乎能自动填好。文件名中没有日期时，会改用文件创建日期并提示你核对。</li>
+<li><strong>原始视频不要再挪动。</strong>Mac 版直接读取原位置的视频，绝不修改它们；之后若移动或重命名文件，App 就打不开了。请在导入<em>之前</em>把视频放到最终的文件夹（并做好备份）。多格 TST 录像和 iPhone/iPad 导入的视频则会复制一份到 App 内。</li>
+<li><strong>只使用你有权使用的视频</strong>，未发表的录像请遵守所在机构的数据管理规定。</li>
+</ul>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="concepts">3. 理解这五点，用起来更顺手</h2>
+<dl>
+<dt>1. 一段视频 = 一只小鼠的一次实验。</dt>
+<dd>每段视频只属于一只小鼠，并有<strong>实验日期</strong>和<strong>实验次数</strong>（1、2、3……即该小鼠在此任务中的第几次）。在 Mac 版中，这三项是分析前的必填项。</dd>
+<dt>2. 层级本身就是数据。</dt>
+<dd><strong>项目 → 任务 → 分组 → 小鼠 → 实验。</strong>“任务”是一个行为学测试（如“旷场—第 3 批”）。分组（WT、KO、对照……）可选，并且<em>属于小鼠</em>：修改某只小鼠的分组或性别，会同时应用到它在该任务中的所有实验。</dd>
+<dt>3. 任务决定方法。</dt>
+<dd>你不需要选模型。选定任务，就决定了标定方式、分析方法和模型（6 关键点姿态、7 关键点四肢姿态、经典质心追踪或多格轮廓评分）。</dd>
+<dt>4. 追踪一次，评分多次。</dt>
+<dd>追踪（最耗时的部分）只做一次。区域、阈值和分析时间段在追踪之后才应用，修改后结果<strong>无需重新追踪</strong>即可更新。原始视频只读不改。</dd>
+<dt>5. n = 小鼠数。</dt>
+<dd>汇总和统计时，同一阶段内一只小鼠纳入的多次实验先取平均，因此 <strong>n 是小鼠数</strong>——不是实验数，更不是帧数。不同阶段（如训练与测试）不会合并，除非你明确选择。</dd>
+</dl>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="quick-start">4. Mac 快速上手（10 步）</h2>
+<ol class="steps-big">
+<li><strong>打开 RodentStudio。</strong>切换中文 / English：工具栏的地球图标“语言”菜单，或 <strong>RodentStudio › 设置…</strong>（<kbd>⌘</kbd><kbd>,</kbd>）。</li>
+<li><strong>新建任务：</strong>点<strong>新建任务…</strong>（<kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd>），在“要测量哪种行为？”中选择测试（可搜索）。项目会自动创建。</li>
+<li><strong>添加视频：</strong>点 <strong>+ 添加视频…</strong>（<kbd>⌘</kbd><kbd>O</kbd>），或直接把文件拖到侧栏 / 中间列表。</li>
+<li><strong>核对导入表格：</strong>小鼠编号、日期、实验次数必填；分组、性别可选。用“新小鼠的分组 → 应用”可一次填满一列。点<strong>导入</strong>。</li>
+<li><strong>在中间列表打开一次实验</strong>，按顶部四步进行：<strong>① 实验信息 → ② 校准 → ③ 分析 → ④ 复核与导出</strong>（<kbd>⌘</kbd><kbd>[</kbd> / <kbd>⌘</kbd><kbd>]</kbd> 切换上一步 / 下一步）。</li>
+<li><strong>校准：</strong>把彩色手柄拖到场地上（拖动时会出现放大镜），输入场地实际尺寸（cm），设置分析时间段，然后点<strong>仅保存到本视频</strong>（<kbd>⌘</kbd><kbd>S</kbd>）。若相机没动过，可选<strong>用于该任务的所有视频…</strong></li>
+<li><strong>分析：</strong>点<strong>分析该视频</strong>（<kbd>⌘</kbd><kbd>R</kbd>）。其他视频会排入队列；运行期间可继续标定或复核其他动物，也可随时<strong>暂停</strong> / <strong>继续分析</strong>。</li>
+<li><strong>复核追踪：</strong>在“复核与导出 → 逐帧复核与导出”中播放第 0–99 帧（<kbd>⌥</kbd><kbd>P</kbd>），标记错误帧（<kbd>⌥</kbd><kbd>F</kbd>），记录结论“追踪无误”或“追踪有问题”。然后点<strong>下一次待复核的实验 →</strong>。</li>
+<li><strong>查看数值：</strong>“结果”页显示该范式的指标和图表。点侧栏中的任务，可看到全部实验和<strong>组间比较</strong>。</li>
+<li><strong>导出：</strong>在任务页点<strong>导出任务数据…</strong>，会生成一个包含英文 CSV 和 <code>README_methods.txt</code> 的文件夹，可直接用于 R、Python、Prism 或 Excel。</li>
+</ol>
+<div class="notice tip"><p><strong>小贴士：</strong>同一批的第一只小鼠请认真标定和复核。同一任务的新视频会沿用上一个视频的标定（会显示“标定沿用自 ……，请检查”），之后的动物通常只需快速确认。</p></div>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="mac">5. Mac：完整流程</h2>
+
+<h3 id="mac-window">5.1 窗口布局</h3>
+<p>一个窗口，三栏：</p>
+<ul>
+<li><strong>侧栏</strong>（左）分三部分：
+<ul>
+<li><strong>任务</strong>——每个任务，展开后是它的分组；数字角标为实验数量。</li>
+<li><strong>智能列表</strong>——跨所有任务汇总需要处理的实验：<em>全部实验</em>、<em>待分析</em>、<em>待复核</em>、<em>缺信息</em>（缺小鼠编号、日期或实验次数）、<em>已排除</em>，以及仅在存在时显示的<em>未分配任务</em>（早期版本导入的视频）。</li>
+<li><strong>工具</strong>——高级工具（见 <a href="#mac-tools">5.9</a>）。</li>
+</ul></li>
+<li><strong>中间列表</strong>——所选任务 / 分组的小鼠及其各次实验（有分组时按组分段），或智能列表中的实验。顶部可搜索小鼠、分组或日期。点空白处回到任务 / 分组总览。</li>
+<li><strong>右侧页面</strong>——任务或分组总览、小鼠页，或某次实验的四个步骤。</li>
+</ul>
+<p><kbd>⌘</kbd><kbd>1</kbd> 任务 · <kbd>⌘</kbd><kbd>2</kbd> 全部实验 · <kbd>⌘</kbd><kbd>3</kbd> 工具。侧栏可用工具栏按钮隐藏。用 <kbd>⌘</kbd><kbd>+</kbd> / <kbd>⌘</kbd><kbd>−</kbd> 放大或缩小字体（或在设置 › 字体大小中选择 紧凑 / 标准 / 大 / 特大）。</p>
+
+<h3 id="mac-task">5.2 新建与管理任务</h3>
+<p><strong>新建任务…</strong>会打开“要测量哪种行为？”。任务按模块分组，每行都注明测量方法：</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">模块</th><th scope="col">方法</th><th scope="col">任务</th></tr></thead>
+<tbody>
+<tr><td><strong>RodentPose</strong></td><td>Core ML 姿态模型，6 个关键点（鼻尖、双耳、颈部、身体中心、尾根），逐帧识别</td><td>从社交到运动共 16 个范式——见<a href="#assays-pose">速查表</a></td></tr>
+<tr><td><strong>RodentLimb</strong></td><td>Core ML 四肢模型，7 个关键点（四只爪、尾根、鼻尖、嘴）</td><td>圆筒实验、悬尾实验、步态分析</td></tr>
+<tr><td><strong>RodentFlow</strong></td><td>经典质心追踪，10 Hz（背景差分，不使用神经网络）</td><td>10 个视频范式——见<a href="#assays-flow">速查表</a></td></tr>
+<tr><td><strong>悬尾实验 · 多格同步评分</strong></td><td>格子检测、关键帧、逐格轮廓 / 像素运动</td><td>一段录像中的多只小鼠——见<a href="#tst">第 6 节</a></td></tr>
+</tbody></table></div>
+
+<div class="notice"><p><strong>同一个测试出现在两个模块里？</strong>旷场、高架十字迷宫、明暗箱、新物体识别、Y 迷宫、T 迷宫、Barnes 迷宫和恐惧条件化在 RodentPose 和 RodentFlow 中都有。需要头朝向、基于鼻尖的物体 / 社交探索、探头或伸展评估姿势时选 <strong>RodentPose</strong>；需要经典的基于位置的指标、Morris 水迷宫或条件性位置偏好，或者姿态模型难以看清动物时选 <strong>RodentFlow</strong>。同一项研究请固定使用一个模块——两者的指标不能互换。</p></div>
+
+<p><strong>任务备注：</strong>右键任务 → <em>添加／编辑备注…</em>（如“第 3 批，10 mg/kg”）。备注显示在任务名下方，并会导出。</p>
+<p><strong>同名任务：</strong>名称、实验类型和备注都相同（包括都没有备注）的任务会自动合并，所以重复新建“旷场”不会把数据拆散。需要两个独立的同名任务？右键 → <em>按不同备注新建同名任务…</em>。若合并会造成实验次数冲突或分组 / 性别矛盾，程序不会自动合并；合并前也会先备份工作区。</p>
+<p><strong>删除任务：</strong>右键 → <em>删除任务…</em>。会把该任务及其实验记录从项目中移除（如有分析在运行，请先暂停）。视频文件和已保存的追踪结果文件夹会保留，但此操作无法在 App 内撤销。</p>
+
+<h3 id="mac-import">5.3 添加视频</h3>
+<p>选中一个任务（或其中的分组 / 小鼠——会自动预填该分组 / 小鼠），点 <strong>+ 添加视频…</strong>（<kbd>⌘</kbd><kbd>O</kbd>），或把视频拖到侧栏或中间列表。导入表格每行一个视频：</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">列</th><th scope="col">填写内容</th></tr></thead>
+<tbody>
+<tr><td>小鼠编号 *</td><td>在任务内唯一，如 <code>M01</code>。由文件名预填。</td></tr>
+<tr><td>分组</td><td>可选（WT、KO、对照……）。该任务中已有实验的小鼠沿用原分组。</td></tr>
+<tr><td>性别</td><td>可选，属于小鼠（RodentPose、RodentFlow 和 TST 任务显示）。</td></tr>
+<tr><td>日期 *</td><td>实验日期。由文件名预填，否则取文件创建日期（请核对！）。“全部使用第一行的日期”可一键统一。</td></tr>
+<tr><td>实验次数 *</td><td>该小鼠在此任务中的第几次实验。自动填入下一个可用编号。</td></tr>
+<tr><td>阶段</td><td>用于有固定阶段的任务（如新物体识别 训练 / 测试）。</td></tr>
+</tbody></table></div>
+<p>有问题的行会标红（缺编号、实验次数已被占用、列表中同一小鼠的实验次数重复），修正前“导入”按钮不可用。拒绝重复是有意为之：重复记录会悄悄污染统计结果。</p>
+
+<h3 id="mac-info">5.4 第 ① 步 实验信息</h3>
+<ul>
+<li><strong>小鼠、分组、性别</strong>——分组和性别应用于该小鼠在此任务中的所有实验；输入一个已有的小鼠编号，会把这次实验归入那只小鼠。</li>
+<li><strong>实验日期、实验次数</strong>——必填。</li>
+<li><strong>阶段 / 天 / 当天试次</strong>——范式需要时显示（如 Barnes 迷宫的学习天数和试次）。汇总时不同阶段不会合并。</li>
+<li><strong>备注</strong>——剂量、处理、异常情况等（RodentPose 和 RodentLimb 任务显示；RodentFlow 可用任务备注记录批次信息）。</li>
+<li><strong>排除出组间汇总</strong>——需填写原因（会导出）。被排除的实验保留自己的结果，但不进入小鼠均值、组统计和组间比较。排除标准请在看结果<em>之前</em>确定。</li>
+</ul>
+<p>缺少小鼠编号、日期或实验次数的实验会显示橙色标记并出现在“缺信息”中，补全前不能分析。</p>
+
+<h3 id="mac-calibrate">5.5 第 ② 步 校准</h3>
+<p>校准告诉 App：场地在哪里、实际多大（厘米）、物体或区域在哪，以及分析视频的哪一段。</p>
+<ol>
+<li>用时间滑块<strong>选一帧标定画面</strong>（场地边缘清晰、没有被手挡住）。</li>
+<li>若范式提供多种场地，<strong>选择场地类型</strong>（矩形、圆形、十字 / Y / T 迷宫，或仅导出姿态时的“不标定（像素）”）。</li>
+<li><strong>拖动手柄。</strong>拖动时会显示 3 倍放大镜。需要精确时，点选手柄后用<strong>方向键</strong>微调（按住 <kbd>⇧</kbd> 移动更多）。</li>
+<li><strong>输入实际尺寸</strong>（内部宽 / 高、直径、臂长 / 臂宽）。面板会显示比例（约 x 像素 / cm），可顺手核对是否合理。</li>
+<li>设置<strong>范式参数</strong>（区域大小、哪个是新物体、CS 开始时间……）和<strong>分析时间段</strong>（起点和时长；0 = 到结尾）。</li>
+<li>点<strong>仅保存到本视频</strong>（<kbd>⌘</kbd><kbd>S</kbd>）；之后的修改自动保存。<strong>用于该任务的所有视频…</strong>会把它复制到所有视频——仅在相机未移动时使用。</li>
+</ol>
+
+<h4>手柄颜色与标签</h4>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">场地 / 标记</th><th scope="col">手柄</th><th scope="col">放在哪里</th></tr></thead>
+<tbody>
+<tr><td>矩形</td><td>黄色 <code>1–4</code></td><td>场地底面内壁四角：左上、右上、右下、左下。坐标会做透视校正。</td></tr>
+<tr><td>圆形</td><td><code>C</code>、<code>R</code></td><td>C 对准圆心（拖动整体移动），R 拖到内壁。</td></tr>
+<tr><td>十字迷宫</td><td><code>C N E S W</code></td><td>C 在中央，N/E/S/W 在四个臂末端（N = 画面上方）。在参数中选择开放臂方向；青色为开放臂。</td></tr>
+<tr><td>Y 迷宫</td><td><code>J A B C</code></td><td>J 在三臂交汇处，A/B/C 在三个臂末端。</td></tr>
+<tr><td>T 迷宫</td><td><code>J S L R</code></td><td>J 在选择点，S 在起始臂末端，L/R 在左右臂末端。</td></tr>
+<tr><td>三箱</td><td>紫色 <code>L R</code>、青色 <code>L R</code></td><td>紫色 = 中箱左右两条分隔线（可分别拖动）；青色 = 两个铁丝杯中心。</td></tr>
+<tr><td>物体（新物体识别）</td><td><code>A B</code></td><td>两个物体中心；设置物体半径和哪个是新物体。</td></tr>
+<tr><td>Barnes 迷宫</td><td><code>T</code></td><td>目标（逃避）洞；其余洞按数量均匀排列。</td></tr>
+<tr><td>水迷宫（RodentFlow）</td><td><code>P</code></td><td>平台中心。</td></tr>
+<tr><td>Looming / 头朝向</td><td><code>S</code> / <code>Q</code></td><td>S 在巢穴中心；Q 在墙上的提示卡（可选的 0° 参考方向）。</td></tr>
+<tr><td>圆筒（RodentLimb）</td><td>圆形或地面线</td><td>仰拍：与圆筒底面内缘重合（或“根据追踪自动拟合”）。侧拍：把虚线拖到地面（或“根据后爪位置估计”）。</td></tr>
+<tr><td>步态 / 单鼠悬尾</td><td>标尺</td><td>把两端拖到已知距离的标记上并输入该距离；不设比例时，距离以体长为单位。</td></tr>
+</tbody></table></div>
+
+<div class="notice"><p><strong>RodentFlow 必须先标定再追踪</strong>（其追踪器需要把小鼠位置映射到标定后的场地中）。RodentPose 和 RodentLimb 的追踪不依赖标定，可以之后再标定——结果会更新，无需重新识别。</p></div>
+
+<h3 id="mac-analyse">5.6 第 ③ 步 分析</h3>
+<ul>
+<li>点<strong>分析该视频</strong>（<kbd>⌘</kbd><kbd>R</kbd>）。若已有视频在运行，按钮会变成“加入队列”。视频按顺序逐个分析。</li>
+<li>页面显示进度、视频时间、<strong>预计剩余时间</strong>以及实时追踪预览（约每秒更新一次）。</li>
+<li><strong>暂停</strong>会保留已完成的部分；<strong>继续分析</strong>从停下处继续——即使退出过 App 也可以。长视频会分段写入磁盘，内存占用可控。</li>
+<li>同一页面的“该任务的全部动物”卡片 → <strong>分析其余视频（n 个）</strong>会把所有准备就绪的视频加入队列；“全部暂停”可停止队列。缺信息或（RodentFlow）未标定的视频会被列出并跳过。</li>
+<li><strong>重新分析…</strong>会保留之前的结果，复核将使用新结果（之后请重新复核追踪）。</li>
+</ul>
+
+<h3 id="mac-review">5.7 第 ④ 步 复核与导出</h3>
+<h4>“结果”页</h4>
+<p>显示该次实验按原版算法得到的指标与图表，突出主要指标，并标明当前的分析时间段和阶段。时间段、区域或参数请在“校准”中修改——结果会重新计算，无需重新追踪。<strong>导出结果与图表…</strong>会把这次实验的指标、方法说明以及（可选）PNG 图表写入一个新文件夹。</p>
+
+<h4>逐帧复核与导出：追踪复核</h4>
+<p>不需要看完整段视频。一次简短而有条理的检查就能发现大多数问题：</p>
+<ol>
+<li>选择<strong>复核范围</strong>（默认第 0–99 帧）或快捷选项：<em>开头、中间、结尾、随机</em>。</li>
+<li>按<strong>播放</strong>（<kbd>⌥</kbd><kbd>P</kbd>），速度可选“逐帧播放”、0.25×、0.5×、1×、2×；或用 <kbd>⌥</kbd><kbd>←</kbd> / <kbd>⌥</kbd><kbd>→</kbd> 逐帧查看。橙色线为之前 2 秒的轨迹。</li>
+<li>遇到关键点明显错误的帧，按 <kbd>⌥</kbd><kbd>F</kbd>（<em>此处追踪错误</em>）。</li>
+<li>记录<strong>结论</strong>（未复核 / 追踪无误 / 追踪有问题）和备注，它们随该次实验保存并导出。</li>
+<li>点<strong>下一次待复核的实验 →</strong>（或右上角的“下一次实验 →”）。</li>
+</ol>
+<p>结论为“追踪有问题”的实验<em>不会</em>被自动排除——由你按预先设定的标准决定。若解码画面与追踪时间戳对不上，App 会隐藏标点，而不是画在错误的位置。</p>
+
+<h4>追踪事件、图表与原始文件（RodentPose / RodentLimb）</h4>
+<ul>
+<li><strong>追踪质控事件</strong>把连续的“识别失败”“未检测到小鼠”“置信度低”帧合并显示。这些是质量标记，不是行为；追踪质量好的视频可以没有任何事件。点击事件可跳转；可标为“接受”或“标记问题”。</li>
+<li>选择<strong>作图帧范围</strong>（含首尾，从 0 开始），勾选要导出的内容：原始关键点 CSV、质控筛选后的 CSV、逐帧 / 分段质控 CSV、溯源 JSON、轨迹图和置信度图 PNG、标注截图，以及（RodentLimb）事件时间线。点<strong>导出所选文件和图表…</strong>（<kbd>⌘</kbd><kbd>E</kbd>）。图表由已保存的追踪数据生成，这里不会重新运行模型。</li>
+<li><strong>标注 MP4</strong> 为可选项：App 会先测速估时，确认后再导出，不会重复运行模型。</li>
+<li>RodentFlow 实验在同一页面导出 10 Hz 质心采样点（CSV）和追踪复核记录（JSON）。</li>
+</ul>
+
+<h3 id="mac-overviews">5.8 任务页、分组页、小鼠页</h3>
+<ul>
+<li><strong>任务页：</strong>全部实验的表格（小鼠、分组、日期、实验次数、阶段、分析状态、主要指标、追踪复核、是否纳入）。双击打开；多选后右键可用同一原因批量排除 / 重新纳入。标签页：<em>全部实验</em>、<em>组间比较</em>、<em>导出</em>。</li>
+<li><strong>分组页：</strong>该组的小鼠、各阶段描述统计（每只小鼠先取均值，n = 小鼠数）、组级导出，以及<em>重命名分组</em>（应用于此任务中该组的所有小鼠）。</li>
+<li><strong>小鼠页：</strong>该小鼠的各次实验、某一指标随实验次数的变化（已排除的实验为灰色），以及重命名 / 修改分组 / 性别。改成已有编号时，只有在实验次数不冲突时才会合并。</li>
+</ul>
+<p>打开这些页面时，缺少或过期的实验结果会在后台按顺序计算（进度显示在页面顶部，可“停止”）。结果随每次追踪保存；它所依赖的任何内容改变时会自动重算。</p>
+
+<h3 id="mac-tools">5.9 智能列表与工具</h3>
+<p><strong>全部实验</strong>（<kbd>⌘</kbd><kbd>2</kbd>）是项目中所有实验的一张总表，含标定、分析和追踪复核状态——适合最后做一次完整性检查。右键可“在所属任务中打开”或“从项目中移除”（文件本身不会被删除）。</p>
+<p><strong>工具</strong>（<kbd>⌘</kbd><kbd>3</kbd>）用于检查和排错，不用于正式实验：<em>模型</em>（查看已打包的模型）、<em>手动追踪</em>、<em>长视频追踪</em>（到你选择的文件夹）、<em>复核手动结果</em>、<em>RodentLimb 轨迹分析</em>、<em>任务目录</em>，以及<em>旧项目查看器</em>（只读打开旧的 <code>.rodentproj</code> 文件，不做修改）。在工具中得到的结果不关联任务或小鼠。</p>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="tst">6. 多格悬尾实验（TST）</h2>
+<p>该流程用于对<strong>同一段录像中并排悬挂的多只小鼠</strong>评分：自动找到格子，找到所有小鼠都已挂好的时刻（<em>关键帧</em>），逐格测量运动，然后把每个格子保存为一只小鼠的一次普通实验——因此分组、组间比较和导出与其他任务完全一样。（若每段视频只有一只小鼠，并需要爪部关键点、抱握和爬尾判定，请改用 RodentLimb 的“悬尾实验”任务。）</p>
+
+<h3>操作步骤</h3>
+<ol class="steps-big">
+<li><strong>新建任务</strong>“悬尾实验 · 多格同步评分”，点<strong>添加 TST 录像…</strong>（<kbd>⌘</kbd><kbd>O</kbd>）或把视频拖到侧栏。录像需逐段分析。分析窗口顶部有步骤条——<strong>视频 › 格子 › 关键帧 › 结果与小鼠</strong>；左边看画面，右边调设置，底部固定“上一步 / 取消（<kbd>Esc</kbd>）/ 下一步（<kbd>Return</kbd>）”。</li>
+<li><strong>格子：</strong>程序会自动检测格子（检测不到时先平均分成 6 格）。设置“格子数”，把白色手柄拖到格子之间的隔板上，点击格子可选中或跳过。检测到小鼠的格子已预先勾选。然后点<strong>寻找关键帧 →</strong>（视频已剪辑为所有小鼠挂好之后才开始时，可用“手动设定起点…”）。</li>
+<li><strong>关键帧：</strong>所有选中格子都已有小鼠并持续设定时长的第一个时刻。找到后即可点“采用此关键帧 →”，但让扫描完整跑完，各格的运动框才能覆盖小鼠的全部活动范围，并能看出小鼠何时被取下。可用 ±0.25 秒 / ±1 秒按钮或点击时间轴微调。拖动黄色手柄，使<em>分析带</em>覆盖每只小鼠并在上方留一点空间。然后点<strong>开始分析 →</strong>。</li>
+<li><strong>结果与小鼠：</strong>一格一行，同时显示不动时间和小鼠信息。实验日期整段录像只填一次；逐格填写小鼠编号、分组、性别、实验次数；空格或不可用的格子取消勾选（不会生成实验记录）。只有真正的冲突才会标红。点<strong>保存 N 次实验</strong>。</li>
+<li>小鼠会出现在侧栏，并自动打开第一只的“复核与导出”：打开原始录像检查该格，选择“评分无误”或“存在问题”（选中即保存），必要时填写原因并排除。</li>
+</ol>
+
+<h3>评分原理</h3>
+<ul>
+<li><strong>每只小鼠从自己挂上的时刻开始计时。</strong>标准测试时长 6 分钟。<strong>主要指标（★）是第 2–6 分钟的不动时间</strong>；同时报告第 0–2、0–6 分钟和全程，以及首次不动潜伏期、不动次数 / 平均 / 最长片段、每分钟不动时间和<em>运动强度</em>（活动时的平均运动量，即挣扎的剧烈程度）。</li>
+<li>默认指标是每只小鼠固定<strong>运动框内的像素变化</strong>，比较前先对齐画面以抵消被动摆动（摆动不计为运动）。另有两种基于轮廓的指标可供对照。</li>
+<li>默认从关键帧分析到视频结束；需要固定时长时打开“到此为止（限定时长）”。没有小鼠的帧（已取下、爬尾、出画）计为“无小鼠”，不计为不动；不动百分比的分母只包含有小鼠的帧。</li>
+<li>“无小鼠”帧超过 10% 的格子会提示复核。若某只鼠挂上后没录满 6 分钟，也会给出提示。</li>
+</ul>
+
+<div class="notice warn"><p><strong>请针对自己的装置校准阈值。</strong>TST 自动评分尚未经过盲法人工评分验证，默认阈值（鼠体的 2%）只是起始值。先人工评分 2–3 段不动程度不同的视频（例如使用 <a href="https://www.boris.unito.it/" target="_blank" rel="noopener noreferrer">BORIS</a>），然后在“结果与小鼠”中点<strong>用人工评分校准阈值…</strong>：填入人工评分的秒数（第 2–6 分钟），点“寻找最佳阈值”并应用。整个研究使用同一阈值。</p></div>
+
+<h3>之后修改设置</h3>
+<p>打开任意一次 TST 实验，点<strong>调整参数并重新分析…</strong>（右键菜单中也有）。录像会以原来的格子、起点和参数重新打开。阈值、最短不动片段和时间窗可立即修改；改格子、分析带或起点则需重新分析。<strong>更新实验</strong>会原地更新已有实验（实验 ID 不变；因数值改变，复核结论会清空，备注保留），为新勾选的格子新建实验，并删除不再保存的格子对应的实验（删除前会提示数量）。</p>
+
+<h3>如何解读 TST 结果</h3>
+<p>不动时间更准确的说法是<strong>被动应对策略</strong>，不宜直接称为“抑郁样”行为。镇静或兴奋、运动能力、体重、性别、品系和尾部不适都会影响结果，建议配合运动能力对照（如同一批小鼠的旷场总距离）一起解读。参见 <a href="https://doi.org/10.3791/3769" target="_blank" rel="noopener noreferrer">Can 等 2012</a> 和 <a href="https://doi.org/10.1021/acschemneuro.7b00042" target="_blank" rel="noopener noreferrer">Commons 等 2017</a>。</p>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="compare">7. 组间比较与统计（Mac）</h2>
+<p>打开任务，选择<strong>组间比较</strong>。依次选择<em>设计</em>、<em>指标</em>、<em>阶段</em>、纳入哪些实验（<em>全部实验（按小鼠取平均）</em>或<em>仅第 n 次</em>）、<em>统计</em>（参数检验 / 非参数检验）和<em>比较方式</em>（两两比较 / 与第一组比较）。</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">设计</th><th scope="col">每只小鼠的值</th><th scope="col">检验（两组 · ≥ 3 组）</th></tr></thead>
+<tbody>
+<tr><td>组间比较</td><td>其纳入实验的均值</td><td>Welch t（附 95% CI）或 Mann–Whitney U · 单因素方差分析 + Tukey–Kramer，或各组与第一组比较 + Holm；Kruskal–Wallis + Dunn（Holm）</td></tr>
+<tr><td>按实验次数</td><td>每个实验次数一个值</td><td>两因素混合方差分析（组 × 实验次数，Greenhouse–Geisser 校正）+ 各次组间检验（Holm 校正）</td></tr>
+<tr><td>按天</td><td>同一天的试次先平均（学习曲线）</td><td>同上</td></tr>
+<tr><td>时间进程</td><td>一次实验内的序列（时间段、CS 呈现、TST 每分钟）</td><td>同上</td></tr>
+<tr><td>配对指标</td><td>同一小鼠的两个指标（新物体 vs 熟悉物体、开放臂 vs 闭合臂）</td><td>组内：配对 t / Wilcoxon；组间：交互作用或差值检验</td></tr>
+<tr><td>阶段间变化</td><td>每只小鼠 阶段 B − 阶段 A（如 测试 − 前测）</td><td>同“组间比较”</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>对照组排第一：</strong>名称像对照的组（WT、Control、Vehicle、Saline、Sham）默认排在最前；可在列表中调整顺序、颜色和是否纳入，设置按任务保存。</li>
+<li><strong>参考值：</strong>对有天然“无偏好值”的指标（DI = 0、识别指数 = 50%、目标象限 = 25%），可勾选<em>各组与参考值比较</em>。</li>
+<li><strong>选项：</strong><em>显示每只小鼠</em>；<em>包含已排除的实验</em>（仅用于敏感性查看）。</li>
+<li><strong>导出该比较…</strong>会生成图（PNG）、方法与结果摘要（TXT）、完整结果（JSON）和每只小鼠进入检验的数值（CSV）。</li>
+</ul>
+<div class="notice warn"><p><strong>这些是用于初步查看数据的统计</strong>：没有对多个指标、多种设计或多次查看数据做校正。每组少于 2 只时不给检验结果（并说明原因）。报告前请用预先设定的分析确认——导出的 <code>animals.csv</code> 和 <code>comparison_animal_values.csv</code> 可直接用于 R、Python 或 <a href="https://www.graphpad.com/" target="_blank" rel="noopener noreferrer">GraphPad Prism</a>。</p></div>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="exports">8. 导出文件说明（Mac）</h2>
+<p>无论界面语言是什么，所有导出都使用<strong>英文列名和标识</strong>，并保留你的原始编号。你自己输入的内容（小鼠编号、分组名、备注、排除原因）按原样导出——如需全英文数据集，请在输入时使用英文。每次导出都会在你选择的文件夹中<strong>新建一个文件夹</strong>，不会覆盖旧文件。</p>
+
+<h3>任务级与组级导出</h3>
+<p>任务页 → <em>导出</em> → <strong>导出任务数据…</strong>，或分组页 → <strong>导出组数据…</strong></p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">文件</th><th scope="col">内容</th><th scope="col">用途</th></tr></thead>
+<tbody>
+<tr><td><code>sessions.csv</code></td><td>每次实验一行：任务、小鼠、分组、性别、日期、实验次数、阶段 / 天 / 试次、是否排除及原因、状态、追踪复核、质控警告、分析时间段、主要指标、视频文件、备注</td><td>核对与追溯到原视频</td></tr>
+<tr><td><code>metrics_long.csv</code></td><td>每次实验 × 每个指标一行（键、英文名、单位、数值、是否主要指标）</td><td>R / pandas 的整洁数据</td></tr>
+<tr><td><code>metrics_wide.csv</code></td><td>每次实验一行，每个指标一列</td><td>Excel、快速作图</td></tr>
+<tr><td><code>animals.csv</code></td><td>每只小鼠 × 每个阶段：纳入实验的均值、纳入数量、实验次数和日期</td><td><strong>统计分析（n = 小鼠数）</strong></td></tr>
+<tr><td><code>group_summary.csv</code></td><td>每个阶段 × 分组 × 指标：n、均值、SD、SEM、中位数、四分位数、最小值、最大值</td><td>论文表格</td></tr>
+<tr><td><code>timecourse_long.csv</code></td><td>每次实验 × 每个时间段（如 TST 每分钟）</td><td>重复测量 / 混合模型</td></tr>
+<tr><td><code>README_methods.txt</code></td><td>数值如何得到、计数、被排除的实验及原因、警告</td><td>方法部分、给审稿人看</td></tr>
+</tbody></table></div>
+
+<h3>逐帧追踪数据（DeepLabCut 格式）</h3>
+<p>任务页或分组页 → <strong>导出逐帧数据…</strong>（在后台进行；每次实验每分钟视频约 1 MB）。</p>
+<ul>
+<li><strong>RodentPose / RodentLimb：</strong><code>frames/&lt;小鼠&gt;_&lt;日期&gt;_S&lt;次数&gt;_DLC.csv</code> 为 DeepLabCut 格式（三行表头：scorer / bodyparts / coords；每个关键点 x、y、likelihood），另有 <code>…_frames.csv</code>，含视频时间、帧号、是否在分析时间段内、检测置信度、是否推理失败。</li>
+<li><strong>RodentFlow：</strong><code>…_centroid.csv</code>（画面与场地坐标，单位为像素、归一化值和厘米；置信度、是否插值、所在区域、运动指数），一份只含 centroid 一个点的 DLC 文件，有迷宫事件时另有 <code>…_maze_events.csv</code>。</li>
+<li><code>frames_index.csv</code> 和 <code>frames_metadata.json</code> 列出每次实验、模型、关键点名称、帧数、分析时间段及读取错误。</li>
+<li>约定：校正旋转后的竖直画面像素，原点在左上角，x 向右，y 向下（与 DLC 相同）。缺失的关键点 x、y 为空、likelihood 为 0。<code>inference_failed = 1</code> 表示模型没能运行——与“画面中没有动物”不是一回事。</li>
+</ul>
+<pre><code># Python / pandas
+import pandas as pd
+df = pd.read_csv("frames/M01_2026-10-17_S1_DLC.csv", header=[0, 1, 2], index_col=0)</code></pre>
+<p>这些文件可直接用于后续工具，例如 <a href="https://deeplabcut.github.io/DeepLabCut/" target="_blank" rel="noopener noreferrer">DeepLabCut</a> 的分析工具、<a href="https://github.com/sgoldenlab/simba" target="_blank" rel="noopener noreferrer">SimBA</a>、<a href="https://github.com/YttriLab/B-SOID" target="_blank" rel="noopener noreferrer">B-SOiD</a> 和 <a href="https://keypoint-moseq.readthedocs.io/" target="_blank" rel="noopener noreferrer">keypoint-MoSeq</a>。</p>
+
+<h3>多格 TST 文件</h3>
+<p>会自动包含在任务 / 组级导出中，也可点<strong>仅导出 TST 数据（JSON + CSV）…</strong>单独导出。</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">文件</th><th scope="col">内容</th></tr></thead>
+<tbody>
+<tr><td><code>tst_animals.csv</code></td><td>每只小鼠：其纳入实验的均值——<strong>统计分析用这一份</strong></td></tr>
+<tr><td><code>tst_sessions.csv</code></td><td>每次实验：身份、时间（挂上时刻、关键帧、时间窗、录制比例）、全部指标、质控与方法参数</td></tr>
+<tr><td><code>tst_minutes_long.csv</code></td><td>每次实验 × 挂上后每分钟一行，含是否录完整</td></tr>
+<tr><td><code>tst_bouts.csv</code></td><td>每个不动片段（开始、结束、时长；从挂上时起及视频中的时间）</td></tr>
+<tr><td><code>tst_frames_long.csv</code>、<code>tst_motion_1s.csv</code>、<code>tst_frames.json</code></td><td>逐帧运动信号本身（评分用值、原始值、阈值、是否不动、是否无小鼠）——可用任何标准重新判定，或与人工逐帧评分对比</td></tr>
+<tr><td><code>tst_export.json</code>、<code>tst_data_dictionary.csv</code></td><td>以上全部内容的结构化文件，以及每一列的含义和单位</td></tr>
+</tbody></table></div>
+<p>若同一任务中的录像使用了不同的指标或阈值，JSON 的说明中会警告：这些数值不能直接比较。</p>
+
+<div class="notice tip"><p><strong>用 Excel 打开 CSV：</strong>文件为 UTF-8 编码。若你自己输入的中文备注显示为乱码，请通过“数据 › 从文本/CSV”导入并选择 UTF-8（Numbers 可直接打开）。指标名使用普通 ASCII 连字符（如 <code>min 2-6</code>），列名不会出现这个问题。</p></div>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="ios">9. iPhone 与 iPad</h2>
+<p>RodentStudio Mobile 在设备上运行同一个 6 关键点 RodentPose 模型和 16 个 RodentPose 范式。App 有三个标签页：<strong>首页</strong>、<strong>范式库</strong>、<strong>数据</strong>；设置在首页右上角的齿轮图标里。</p>
+
+<h3>第一次分析</h3>
+<ol class="steps-big">
+<li><strong>首页 → 新建分析。</strong>选择范式（或点“常用范式”中的一个；“范式库”介绍了每个范式用到的关键点、输出指标、拍摄与标定要求和参考文献）。</li>
+<li><strong>导入视频：</strong>“从相册选择视频”或“从‘文件’选择视频”。视频会复制一份到本次分析的文件夹，便于之后回看。模型还在加载时，也可以先导入视频并完成标定。</li>
+<li><strong>信息：</strong>填写<em>编号</em>（用于文件名和汇总表，建议在识别前填写）、组别（用过的组别会显示在输入框下方，轻点即可填入）、性别、<em>阶段 / 条件</em>（轻点 + 添加自己的标签，如“Day 1”“Baseline”；长按可移除）、天、试次和备注。</li>
+<li><strong>识别设置</strong>（也在“信息”页）：<em>抽帧</em>（每帧，或长视频每 2 / 3 / 5 帧识别一次——速度和僵直按实际时间计算，但 VTE、探头等快速动作请逐帧）、<em>先转灰度再识别</em>（建议开启）、<em>双鼠模式</em>（双鼠社交互动）以及<em>识别范围</em>。之后修改这些需要重新识别。</li>
+<li><strong>标定：</strong>拖动手柄（标签与 Mac 版相同，见 <a href="#mac-calibrate">5.5</a>）。拖动时对侧上角会出现放大镜。识别完成后打开<em>叠加已识别轨迹</em>，可检查标定范围是否与动物的实际活动范围吻合。VoiceOver 用户可在操作菜单中逐步微调手柄。</li>
+<li><strong>识别：</strong>点“开始识别”。识别期间请保持 App 在前台（屏幕不会自动锁定）。切到后台会自动暂停并保存进度，回来后点“继续识别”即可。</li>
+<li><strong>结果：</strong>主要指标（有意义时附刻度，如 0 = 无偏好）、全部指标、图表、识别质量，以及可一键复制的<em>方法说明（可用于论文 Methods）</em>。每张图都有 ••• 菜单：<em>复制图像</em>、<em>分享图像…</em>、<em>复制数据（CSV，英文）</em>。</li>
+<li><strong>下一只（同范式）</strong>会用同一范式开始下一次分析；相机没动过时可沿用标定。</li>
+</ol>
+
+<h3>回看视频</h3>
+<p>打开“回看视频”可查看姿态叠加、行为区域和 2 秒运动拖尾（仅为显示做了平滑，不影响指标）。用“上一个事件 / 下一个事件”在已判定的行为之间跳转（行为图例同时也是筛选器），可逐帧前后、后退 / 前进 5 秒，速度 0.25×–2×。</p>
+
+<h3>导出</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">导出项</th><th scope="col">内容</th></tr></thead>
+<tbody>
+<tr><td>指标汇总 CSV</td><td>本次分析的全部指标，一行一个</td></tr>
+<tr><td>逐帧分析 CSV</td><td>平滑后坐标（cm）、速度、头朝向、区域与行为标记</td></tr>
+<tr><td>原始关键点 CSV</td><td>模型输出的像素坐标与置信度</td></tr>
+<tr><td>完整报告 JSON</td><td>指标、参数、标定、质量与方法说明</td></tr>
+<tr><td>汇总表（“数据”页）</td><td>“导出汇总表”可导出全部或当前筛选的分析——每次分析一行，用于在 R、Python 等工具中做组间分析</td></tr>
+</tbody></table></div>
+<p>导出通过系统共享面板完成（存储到“文件”、隔空投送到 Mac、邮件……）。CSV 为带 BOM 的 UTF-8，Excel 可直接正确显示中文；列名始终为英文。</p>
+
+<h3>管理存储空间</h3>
+<ul>
+<li>在<strong>数据</strong>页左滑或长按某次分析，可“删除视频副本”（保留姿态数据和结果，但无法再回看视频或重新识别）或“删除此分析”（全部永久删除）。</li>
+<li>每次分析的文件夹位于“文件”App › 我的 iPhone/iPad › RodentStudio › Sessions：<code>session.json</code>（设置与指标）、<code>pose.mpt</code>（逐帧关键点）、<code>video.*</code>（视频副本）。参见 <a href="https://support.apple.com/zh-cn/guide/iphone/iphc61044c11/ios" target="_blank" rel="noopener noreferrer">Apple：iPhone 上的“文件”</a>。</li>
+<li>把导出文件传到 Mac：可用隔空投送、“文件”App 或 <a href="https://support.apple.com/zh-cn/119585" target="_blank" rel="noopener noreferrer">访达文件共享</a>。Mac 版与移动版目前各自保存独立的数据库：如需把一项研究汇总到一起，请在 Mac 上分析原始视频，或合并导出的 CSV。</li>
+</ul>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="assays">10. 实验范式速查</h2>
+<p>下表列出每个范式在标定时需要什么、首先报告什么。所有阈值和区域都可以在“校准”中调整；导出时的指标键以 <code>代码</code> 格式标出。</p>
+
+<h3 id="assays-pose">RodentPose（Mac、iPhone、iPad）— 6 个关键点</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">范式</th><th scope="col">场地与标记</th><th scope="col">阶段</th><th scope="col">主要指标</th><th scope="col">说明</th></tr></thead>
+<tbody>
+<tr><td>三箱社交</td><td>矩形 1–4；分隔线 L/R；杯子 L/R</td><td>社交偏好、社交新颖性、适应</td><td>嗅探指数 <code>sniff_index</code></td><td>设置陌生鼠所在杯；杯子半径、嗅探距离、头朝向容差</td></tr>
+<tr><td>社交回避测试</td><td>矩形 1–4；网罩所靠墙面</td><td>无目标、有目标</td><td>互动区时间 <code>iz_time</code>；配对后为 SI ratio</td><td>两个阶段用相同编号分析即可自动配对（<a href="https://doi.org/10.1038/nprot.2011.361" target="_blank" rel="noopener noreferrer">Golden 2011</a>：150 s）</td></tr>
+<tr><td>双鼠社交互动</td><td>矩形或圆形</td><td>—</td><td>社交接触总时间 <code>social_total</code></td><td>iPhone/iPad 使用双鼠模式；身体重叠后身份可能交换。Mac 版仅单鼠追踪</td></tr>
+<tr><td>头朝向</td><td>矩形或圆形；提示卡 Q（可选）</td><td>—</td><td>方向覆盖度 <code>hd_coverage</code></td><td>记录系统与视频的时间偏移需自行对齐；CSV 含逐帧时间戳</td></tr>
+<tr><td>空间探索 · 位置细胞</td><td>矩形或圆形</td><td>—</td><td>覆盖度 <code>coverage</code></td><td>长时间记录可每 2–3 帧识别一次以节省时间（移动版）</td></tr>
+<tr><td>旷场</td><td>矩形或圆形</td><td>—</td><td>中央区时间 % <code>center_pct</code></td><td>中央区默认为边长的 50%</td></tr>
+<tr><td>高架十字迷宫</td><td>十字迷宫 C/N/E/S/W</td><td>—</td><td>开放臂时间 % <code>open_time_pct</code></td><td>选择开放臂方向；可检测探头和伸展评估姿势（SAP）</td></tr>
+<tr><td>明暗箱</td><td>矩形 1–4</td><td>—</td><td>明箱时间 % <code>light_pct</code></td><td>设置明箱位置和所占比例</td></tr>
+<tr><td>新物体识别</td><td>矩形或圆形；物体 A/B</td><td>测试、训练</td><td>辨别指数 <code>di</code></td><td>基于鼻尖的探索；测试阶段选择哪个是新物体</td></tr>
+<tr><td>Barnes 迷宫</td><td>圆形 C/R；目标洞 T</td><td>学习期、探索测试</td><td>首次潜伏期 <code>primary_latency</code></td><td>洞的数量、洞半径、探洞判定余量</td></tr>
+<tr><td>Y 迷宫自发交替</td><td>Y 迷宫 J/A/B/C</td><td>—</td><td>交替率 <code>alternation_pct</code></td><td>进臂判定：身体+尾根、身体中心或鼻尖</td></tr>
+<tr><td>T 迷宫 · VTE</td><td>T 迷宫 J/S/L/R</td><td>—</td><td>VTE 比例 <code>vte_pct</code></td><td>请逐帧识别；zIdPhi 阈值可调</td></tr>
+<tr><td>恐惧条件化</td><td>矩形 1–4</td><td>线索测试、情境测试、训练</td><td>CS 期间僵直 <code>freeze_cs_mean</code></td><td>输入 CS 开始时间（相对视频开头的秒数），或按固定间隔生成；红外 / 灰度视频效果最好</td></tr>
+<tr><td>Looming 逃跑</td><td>矩形或圆形；巢穴 S</td><td>—</td><td>逃跑概率 <code>escape_pct</code></td><td>输入每次刺激出现的时间</td></tr>
+<tr><td>旋转行为</td><td>圆形、矩形或不标定</td><td>阿扑吗啡、安非他明、自发、其他</td><td>净旋转 / 分钟 <code>net_per_min</code></td><td>设置损伤侧；“从下方拍摄”会镜像方向；每 5 分钟分段</td></tr>
+<tr><td>仅导出姿态</td><td>不标定、矩形或圆形</td><td>自由填写</td><td>检出率 <code>detection_rate</code></td><td>不标定时为像素坐标；标定后额外输出厘米坐标</td></tr>
+</tbody></table></div>
+
+<h3 id="assays-flow">RodentFlow（Mac）— 质心 10 Hz</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">范式</th><th scope="col">场地与标记</th><th scope="col">阶段</th><th scope="col">主要指标</th><th scope="col">说明</th></tr></thead>
+<tbody>
+<tr><td>旷场 / 中央区</td><td>矩形或圆形</td><td>—</td><td>总距离 <code>distance_m</code></td><td>中央区大小、运动阈值、最短不动时长、时间段</td></tr>
+<tr><td>高架十字迷宫</td><td>十字迷宫 C/N/E/S/W</td><td>—</td><td>开放臂时间 % <code>open_time_pct</code></td><td>开放臂方向、中央区外扩</td></tr>
+<tr><td>明暗箱</td><td>矩形</td><td>—</td><td>明箱时间 % <code>light_time_pct</code></td><td>可选：看不到小鼠时计为在暗箱（暗箱有盖时）</td></tr>
+<tr><td>Y 迷宫</td><td>Y 迷宫 J/A/B/C</td><td>—</td><td>自发交替率 <code>alternation_pct</code></td><td>稳定停留 0.25 s 才计为进臂</td></tr>
+<tr><td>T 迷宫</td><td>T 迷宫 J/S/L/R</td><td>—（试次）</td><td>首选右侧 % <code>right_choice_pct</code></td><td>选择潜伏期、进臂次数</td></tr>
+<tr><td>新物体识别</td><td>矩形或圆形；A/B</td><td>训练、测试</td><td>辨别指数 <code>discrimination_index</code></td><td>交互半径从身体中心算起，约为物体半径 + 5 cm；总探索时间排除标准</td></tr>
+<tr><td>Morris 水迷宫</td><td>圆形 C/R；平台 P</td><td>习得、探索测试（天、试次）</td><td>逃避潜伏期（习得）/ 目标象限 %（探索测试）</td><td>平台区半径、试次最长时间、平台停留要求、贴壁区宽度</td></tr>
+<tr><td>Barnes 迷宫</td><td>圆形 C/R；目标洞 T</td><td>习得、探索测试（天、试次）</td><td>首次潜伏期 / 目标象限 %</td><td>错误次数以身体质心近似探洞</td></tr>
+<tr><td>恐惧条件化</td><td>矩形</td><td>训练、情境测试、线索测试</td><td>僵直 % / CS 期间僵直 %</td><td>运动指数阈值；实验程序起点、基线、CS 起始时间——请用人工评分片段检验</td></tr>
+<tr><td>条件性位置偏好</td><td>矩形；两箱或三箱</td><td>前测、条件化、测试（天）</td><td>偏好分数（配对侧 − 非配对侧，秒）</td><td>分隔线位置、配对侧；CPP 分数 = 测试 − 前测，用“阶段间变化”计算</td></tr>
+</tbody></table></div>
+
+<h3 id="assays-limb">RodentLimb（Mac）— 7 个关键点</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">范式</th><th scope="col">标定</th><th scope="col">报告内容</th><th scope="col">关键参数</th></tr></thead>
+<tbody>
+<tr><td>圆筒实验</td><td>圆筒边缘（仰拍）或地面线（侧拍）</td><td>竖立时前爪触壁：左、右、双爪、使用不对称性</td><td>损伤半球、镜像画面时交换左右标签、触壁区域、最短触壁、仅统计前 n 分钟 / 前 n 次（<a href="https://doi.org/10.1016/S0028-3908(00)00005-8" target="_blank" rel="noopener noreferrer">Schallert 2000</a>）</td></tr>
+<tr><td>悬尾实验（单鼠）</td><td>标尺（可选）</td><td>不动时间、潜伏期、逐分钟曲线、后肢抱握、爬尾</td><td>默认分析 120–360 秒、运动阈值、最短不动时长、抱握评估时长（约 10 秒，<a href="https://doi.org/10.3791/1787" target="_blank" rel="noopener noreferrer">Guyenet 2010</a>）</td></tr>
+<tr><td>步态分析</td><td>标尺（已知距离）</td><td>支撑相 / 摆动相、步幅、占空比、支撑基底、肢间相位、规律性</td><td>最低行走速度、最大转向角速度（±20 °/s）、去掉首尾步幅、速度匹配参考速度——所有动物使用相同的值</td></tr>
+</tbody></table></div>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="good-practice">11. 让结果经得起检验</h2>
+<div class="notice"><p><strong>RodentStudio 是科研辅助工具，不是诊断工具。</strong>它的指标是基于关键点几何关系或运动信号的算法估计，质量取决于你的录像、标定和阈值；桌面版分析器是原版算法的移植，与原版 App 的数值一致性仍在验证中。</p></div>
+<ol>
+<li><strong>在自己的装置上验证。</strong>每个范式人工评分几段视频（对分组设盲），与 RodentStudio 结果对比，在正式实验之前把阈值调好一次。<a href="https://www.boris.unito.it/" target="_blank" rel="noopener noreferrer">BORIS</a> 是免费的人工行为评分工具。</li>
+<li><strong>固定参数。</strong>同一研究中所有动物使用相同的标定方法、分析时间段和阈值。这些参数都会写入每份导出。</li>
+<li><strong>每次实验都复核追踪</strong>（检查 100 帧不到一分钟），并提前确定排除标准（如掉落迷宫、检出率 &lt; 80%）。App 会列出质控警告，但从不自动排除。</li>
+<li><strong>尊重实验单位。</strong>n = 小鼠数，而不是实验数或帧数（<a href="https://doi.org/10.1371/journal.pbio.2005282" target="_blank" rel="noopener noreferrer">Lazic 等 2018</a>）。不要合并不同阶段。</li>
+<li><strong>App 内统计仅作初步参考</strong>，请对导出的 <code>animals.csv</code> 运行你预先注册的分析。</li>
+<li><strong>如实报告：</strong>App 版本、范式、模型或追踪方法、标定、分析时间段、阈值、排除情况——<code>README_methods.txt</code> 和移动版的“方法说明”可作为初稿。请参照 <a href="https://arriveguidelines.org/" target="_blank" rel="noopener noreferrer">ARRIVE 2.0 指南</a>。</li>
+<li><strong>谨慎解读。</strong>“鼻尖靠近物体”是探索的近似指标；“运动量低”是僵直或不动的近似指标。焦虑、记忆、应对类指标都应配合运动能力对照一起解读。</li>
+</ol>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="data">12. 数据存放位置、备份与隐私</h2>
+<h3>Mac</h3>
+<ul>
+<li><strong>你的视频</strong>留在原位置，只读不改。App 会记住你选择这些文件时授予的访问权限。</li>
+<li><strong>工作区</strong>（项目、任务、实验、标定、复核结论）和<strong>追踪结果</strong>保存在 App 的沙盒容器中，通常位于<br><code>~/Library/Containers/com.ziqingshi.RodentStudio/Data/Library/Application Support/RodentDesktopNative/</code><br>（<code>workspace.json</code> 和 <code>Runs</code> 文件夹）。在访达中选择“前往 › 前往文件夹…”（<kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>）并粘贴该路径即可打开。</li>
+<li>每次自动合并任务之前，都会在工作区旁写入备份 <code>workspace-before-task-merge-*.json</code>。</li>
+<li>请<strong>备份</strong>视频文件夹、上述容器文件夹和导出文件夹——<a href="https://support.apple.com/zh-cn/104984" target="_blank" rel="noopener noreferrer">时间机器</a>可一次备份全部。手动复制工作区前请先退出 RodentStudio。</li>
+<li>在 App 中移除视频或删除任务<strong>不会</strong>删除原始视频或追踪结果文件夹，因此不会误删数据——但也意味着磁盘空间不会自动释放。</li>
+<li>文件访问遵循你选择文件或文件夹时授予的权限，参见 <a href="https://support.apple.com/zh-cn/guide/mac-help/mchld5a35146/mac" target="_blank" rel="noopener noreferrer">Apple：控制对 Mac 上文件和文件夹的访问</a>。</li>
+</ul>
+<h3>iPhone 与 iPad</h3>
+<ul>
+<li>每次分析是“文件”App › 我的 iPhone/iPad › RodentStudio › Sessions 下的一个文件夹，含视频副本。设置页会显示分析次数和占用空间。</li>
+<li>设备备份（iCloud 或访达）会按你的备份设置包含 App 数据；重要研究请另外导出结果。</li>
+</ul>
+<p>无账号、无广告、无开发者数据分析、无上传服务：详情和注意事项见<a href="privacy.html">隐私政策</a>。</p>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="shortcuts">13. 键盘快捷键（Mac）</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">快捷键</th><th scope="col">功能</th><th scope="col">适用位置</th></tr></thead>
+<tbody>
+<tr><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd></td><td>新建任务…</td><td>任意位置</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>O</kbd></td><td>添加视频… / 添加 TST 录像…</td><td>已选中任务时</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>1</kbd> · <kbd>⌘</kbd><kbd>2</kbd> · <kbd>⌘</kbd><kbd>3</kbd></td><td>任务 · 全部实验 · 工具</td><td>任意位置</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>+</kbd> / <kbd>⌘</kbd><kbd>−</kbd></td><td>放大 / 缩小字体</td><td>任意位置</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>,</kbd></td><td>设置（语言、字体大小）</td><td>任意位置</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>[</kbd> / <kbd>⌘</kbd><kbd>]</kbd></td><td>上一步 / 下一步</td><td>实验步骤</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>S</kbd></td><td>仅保存到本视频（标定）</td><td>校准</td></tr>
+<tr><td>方向键（<kbd>⇧</kbd> 移动更多）</td><td>微调选中的手柄</td><td>校准</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>R</kbd></td><td>分析该视频 / 继续分析</td><td>分析</td></tr>
+<tr><td><kbd>⌥</kbd><kbd>P</kbd></td><td>播放 / 暂停</td><td>逐帧复核</td></tr>
+<tr><td><kbd>⌥</kbd><kbd>←</kbd> / <kbd>⌥</kbd><kbd>→</kbd></td><td>上一帧 / 下一帧（或采样点）</td><td>逐帧复核</td></tr>
+<tr><td><kbd>⌥</kbd><kbd>F</kbd></td><td>标记“此处追踪错误”</td><td>逐帧复核</td></tr>
+<tr><td><kbd>⌘</kbd><kbd>E</kbd></td><td>导出所选文件和图表</td><td>逐帧复核与导出</td></tr>
+<tr><td><kbd>Return</kbd> / <kbd>Esc</kbd></td><td>下一步 / 取消</td><td>TST 录像窗口、对话框</td></tr>
+</tbody></table></div>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="troubleshooting">14. 常见问题排查</h2>
+
+<h3>导入</h3>
+<details><summary>以前能用的实验提示“无法打开视频”</summary><p>文件被移动、重命名、删除，或位于未连接的外置 / 网络硬盘上。请连接硬盘或把文件放回原处。否则，把这次实验从项目中移除后重新添加视频（并重新检查标定）。</p></details>
+<details><summary>视频无法导入或没有画面</summary><p>可能是 macOS / iOS 不支持该编码。请用 <a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">HandBrake</a> 转成 H.264 MP4（如“Fast 1080p30”预设）后重试。若普通的 H.264 MP4 仍然失败，请<a href="support.html">反馈给我们</a>。</p></details>
+<details><summary>“文件名和文件中没有日期” / 日期不对</summary><p>导入前把日期写进文件名（<code>M01_2026-10-17.mp4</code>），或在导入表格中手动填写。整批视频同一天录制时，用“全部使用第一行的日期”最方便。</p></details>
+<details><summary>“M01 在此任务中已有第 1 次实验”</summary><p>同一任务中，每只小鼠的实验次数必须唯一。请改用下一个编号（表格会给出建议），或检查是否重复导入了同一段视频。</p></details>
+<details><summary>某次实验在“缺信息”中，无法分析</summary><p>打开它，在“实验信息”中补全小鼠编号、实验日期和实验次数。早期版本导入的实验可能需要补一次。</p></details>
+
+<h3>分析</h3>
+<details><summary>“此版本未安装分析模型”</summary><p>你使用的版本编译时没有包含 Core ML 模型。App Store 版本已内置模型。若是自行编译，请运行 <code>git lfs pull</code> 让模型权重成为真实文件，然后重新编译（见<a href="#build">从源码编译</a>）。“工具 › 模型”可查看安装情况。</p></details>
+<details><summary>“请先标定场地”（RodentFlow）</summary><p>RodentFlow 追踪器需要先知道场地位置。进入“校准”，放好手柄并保存后再分析。</p></details>
+<details><summary>分析很慢</summary><p>姿态追踪逐帧进行；视频长、分辨率高时需要较长时间，Intel Mac 尤甚。让队列在后台运行（你可以继续做别的），关闭其他占用资源的 App，并接通电源。在 iPhone/iPad 上，若不需要快速头部动作，长视频可每 2–3 帧识别一次。</p></details>
+<details><summary>分析中断，或 Mac 进入了睡眠</summary><p>点“继续分析”——已完成的分段会保留。“分析失败”会显示原因；“重试”会从头开始。若某段视频反复失败，可尝试重新编码。</p></details>
+<details><summary>检出率低 / 关键点乱跳</summary><p>检查光照、对比度、反光以及动物是否出画。用“逐帧复核”找到问题帧。提高关键点置信度阈值可隐藏不确定的点；平滑和缺口插值（校准 › 分析时间段与预处理）能减少抖动，且无需重新追踪。</p></details>
+<details><summary>结果明显不合理（如中央区时间 0%、距离极大）</summary><p>通常是标定问题：手柄放在外壁而非内壁、场地尺寸填错，或分析时间段不对。检查像素 / cm 比例和手柄位置，并把轨迹与区域对照查看。</p></details>
+<details><summary>同一段视频，RodentPose 和 RodentFlow 结果不同</summary><p>这是正常的。RodentPose 使用关键点（如用鼻尖判断物体探索）；RodentFlow 使用 10 Hz 的身体质心，区域定义也不同。同一研究请固定使用一个模块。</p></details>
+<details><summary>逐帧复核时关键点被隐藏</summary><p>解码画面与追踪时间戳（或画面方向）不一致，为避免误导性复核而隐藏了标点。换到相邻帧即可；原始数据不受影响。</p></details>
+
+<h3>多格 TST</h3>
+<details><summary>没能自动找到格子</summary><p>画面会先平均分成 6 格。请设置正确的格子数并把白色手柄拖到隔板上，或点“重新检测”。</p></details>
+<details><summary>“没有找到所有选中格子同时有小鼠……的时刻”</summary><p>检查是否只选中了有小鼠的格子，在“检测设置…”中降低“最低置信度”，或使用“手动设定起点…”。浅色小鼠请把“小鼠颜色”改为“浅色小鼠 / 深色背景”。</p></details>
+<details><summary>轮廓不贴合小鼠</summary><p>停止后调整分析带使其覆盖小鼠，或在“检测设置…”中修改小鼠颜色。手、袖子和阴影会干扰经典检测器；可在检测设置中导入针对你装置微调过的 YOLO 模型。</p></details>
+<details><summary>“结果”步骤变灰</summary><p>自上次分析后起点、分析带、格子或时间窗已改变。点“重新分析”以更新结果。</p></details>
+<details><summary>“无小鼠”帧超过 10%</summary><p>小鼠爬尾、被提前取下或离开了画面。请在原始录像中复核该格；如不符合你的标准，填写原因后排除。</p></details>
+
+<h3>iPhone 与 iPad</h3>
+<details><summary>识别自己暂停了</summary><p>App 被切到后台或设备锁屏了。进度已保存；打开该分析点“继续识别”。识别期间请保持 App 在前台。</p></details>
+<details><summary>旧的分析无法回看或重新识别</summary><p>为节省空间删除了视频副本。结果和姿态数据仍在；如需回看，请用原始视频新建一次分析。</p></details>
+<details><summary>姿态模型一直在加载</summary><p>加载期间可以先导入视频和标定。若一直无法就绪，打开设置点“重新加载”；重启 App 也有帮助。</p></details>
+
+<h3>导出</h3>
+<details><summary>Excel 中中文显示为乱码</summary><p>通过“数据 › 从文本/CSV”以 UTF-8 编码导入，或用 Numbers 打开。列名为英文，不受影响。</p></details>
+<details><summary>任务导出中部分实验没有数值</summary><p>它们的结果还在计算中。等任务页顶部的进度完成后再导出。未分析或（RodentFlow）未标定的实验没有数值。</p></details>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="build">15. 从源码编译（进阶）</h2>
+<p>两个版本的<a href="https://github.com/seesaw-earth/RodentStudio-Support/tree/main/source" target="_blank" rel="noopener noreferrer">源代码</a>均以 AGPL-3.0 公开。你需要一台装有 <a href="https://developer.apple.com/cn/xcode/" target="_blank" rel="noopener noreferrer">Xcode</a> 的 Mac，以及 <a href="https://git-lfs.com/" target="_blank" rel="noopener noreferrer">Git LFS</a>（Core ML 模型权重用 LFS 存储）。</p>
+<pre><code>git clone https://github.com/seesaw-earth/RodentStudio-Support.git
+cd RodentStudio-Support
+git lfs install
+git lfs pull                       # 拉取真实的模型权重
+
+# Mac 版
+open source/macOS/RodentStudio-0.7.1/RodentStudio.xcodeproj
+# iPhone / iPad 版（内部 target 名为 RodentPose）
+open source/iOS/RodentStudio-Mobile-iOS/RodentPose.xcodeproj</code></pre>
+<ol>
+<li>在 Xcode 中选择 target → <em>Signing &amp; Capabilities</em> → 选择你自己的开发团队（必要时修改 Bundle ID）。</li>
+<li>Mac：选择 <em>My Mac</em>，然后 <em>Product › Build</em>（<kbd>⌘</kbd><kbd>B</kbd>）和 <em>Run</em>（<kbd>⌘</kbd><kbd>R</kbd>）。iPhone/iPad：选择你的设备（iOS 17+）——参见 <a href="https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device" target="_blank" rel="noopener noreferrer">Apple：在设备上运行 App</a>。</li>
+<li>如果编译时提示模型问题，请检查 <code>.mlpackage</code> 文件夹中的 <code>weight.bin</code> 是真实文件（而不是很小的 LFS 指针文件）。<a href="https://github.com/seesaw-earth/RodentStudio-CoreML-Models" target="_blank" rel="noopener noreferrer">Core ML 模型仓库</a>是开发者资源，普通用户无需使用。</li>
+</ol>
+<p>源码检出不等于签名发布版，也不一定通过了最终测试。正式使用前请先用你自己的视频测试。</p>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="reading">16. 延伸阅读与相关工具</h2>
+<h3>实验范式方案</h3>
+<ul>
+<li>旷场——<a href="https://doi.org/10.3791/52434" target="_blank" rel="noopener noreferrer">Seibenhener &amp; Wooten 2015，JoVE</a></li>
+<li>高架十字迷宫——<a href="https://doi.org/10.1038/nprot.2007.44" target="_blank" rel="noopener noreferrer">Walf &amp; Frye 2007，Nat Protoc</a></li>
+<li>明暗箱——<a href="https://doi.org/10.1016/S0014-2999(03)01274-3" target="_blank" rel="noopener noreferrer">Bourin &amp; Hascoët 2003，Eur J Pharmacol</a></li>
+<li>新物体识别——<a href="https://doi.org/10.1038/nprot.2013.155" target="_blank" rel="noopener noreferrer">Leger 等 2013，Nat Protoc</a></li>
+<li>三箱社交——<a href="https://pubmed.ncbi.nlm.nih.gov/21732314/" target="_blank" rel="noopener noreferrer">Yang, Silverman &amp; Crawley 2011，Curr Protoc Neurosci</a></li>
+<li>社交挫败后的社交互动——<a href="https://doi.org/10.1038/nprot.2011.361" target="_blank" rel="noopener noreferrer">Golden 等 2011，Nat Protoc</a></li>
+<li>Y 迷宫——<a href="https://doi.org/10.1007/978-1-4939-8994-2_10" target="_blank" rel="noopener noreferrer">Kraeuter, Guest &amp; Sarnyai 2019</a></li>
+<li>VTE（替代性试错）——<a href="https://doi.org/10.1038/nrn.2015.30" target="_blank" rel="noopener noreferrer">Redish 2016，Nat Rev Neurosci</a></li>
+<li>Morris 水迷宫——<a href="https://doi.org/10.1038/nprot.2006.116" target="_blank" rel="noopener noreferrer">Vorhees &amp; Williams 2006，Nat Protoc</a></li>
+<li>Barnes 迷宫——<a href="https://bio-protocol.org/e2744" target="_blank" rel="noopener noreferrer">Pitts 2018，Bio-protocol</a></li>
+<li>恐惧条件化——<a href="https://www.ncbi.nlm.nih.gov/books/NBK5223/" target="_blank" rel="noopener noreferrer">Curzon, Rustay &amp; Browman 2009（NCBI Bookshelf）</a></li>
+<li>Looming 逃跑——<a href="https://pubmed.ncbi.nlm.nih.gov/24120636/" target="_blank" rel="noopener noreferrer">Yilmaz &amp; Meister 2013，Curr Biol</a></li>
+<li>悬尾实验——<a href="https://doi.org/10.1007/BF00428203" target="_blank" rel="noopener noreferrer">Steru 等 1985</a>；<a href="https://doi.org/10.3791/3769" target="_blank" rel="noopener noreferrer">Can 等 2012，JoVE</a></li>
+<li>圆筒实验——<a href="https://doi.org/10.1016/S0028-3908(00)00005-8" target="_blank" rel="noopener noreferrer">Schallert 等 2000，Neuropharmacology</a></li>
+<li>基于姿态的步态分析——<a href="https://doi.org/10.1016/j.celrep.2021.110231" target="_blank" rel="noopener noreferrer">Sheppard 等 2022，Cell Rep</a></li>
+</ul>
+<h3>实验设计、报告与工具</h3>
+<ul>
+<li><a href="https://arriveguidelines.org/" target="_blank" rel="noopener noreferrer">ARRIVE 2.0 指南</a>——动物研究报告规范</li>
+<li><a href="https://doi.org/10.1371/journal.pbio.2005282" target="_blank" rel="noopener noreferrer">“What exactly is ‘N’…?”</a>——Lazic 等 2018，PLOS Biol（实验单位）</li>
+<li><a href="https://www.boris.unito.it/" target="_blank" rel="noopener noreferrer">BORIS</a>——免费的人工行为评分工具，用于验证</li>
+<li><a href="https://deeplabcut.github.io/DeepLabCut/" target="_blank" rel="noopener noreferrer">DeepLabCut</a>、<a href="https://github.com/sgoldenlab/simba" target="_blank" rel="noopener noreferrer">SimBA</a>、<a href="https://keypoint-moseq.readthedocs.io/" target="_blank" rel="noopener noreferrer">keypoint-MoSeq</a>——导出关键点的后续分析</li>
+<li><a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">HandBrake</a>——免费视频格式转换</li>
+</ul>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+
+<!-- ============================================================ -->
+<h2 id="help">17. 获取帮助</h2>
+<div class="linklist">
+<a href="faq.html">常见问题 →<small>文件、隐私、模型与科研使用</small></a>
+<a href="support.html">支持 →<small>如何求助、需要提供哪些信息</small></a>
+<a href="https://github.com/seesaw-earth/RodentStudio-Support/issues" target="_blank" rel="noopener noreferrer">已知问题 ↗<small>看看是否已有人反馈</small></a>
+<a href="https://github.com/seesaw-earth/RodentStudio-Support/issues/new" target="_blank" rel="noopener noreferrer">反馈问题 ↗<small>公开的 GitHub Issue（需要账号）</small></a>
+</div>
+<p>反馈问题时，请注明版本（Mac 0.7.1、移动版 1.0……）、macOS / iOS 版本和 Mac 类型、所用任务 / 范式、复现步骤和完整的提示信息。<strong>切勿在公开 Issue 中上传未发表的科研视频或个人信息</strong>——如需提供，请先申请私下联系渠道。</p>
+<p>发现本指南有错误？欢迎<a href="https://github.com/seesaw-earth/RodentStudio-Support/issues/new" target="_blank" rel="noopener noreferrer">告诉我们</a>，文档修正同样非常有帮助。</p>
+<p class="meta">本指南更新于 2026 年 10 月 20 日 · Mac 0.7.1（Build 6）· iPhone/iPad 1.0。正式发布前功能可能调整，详见<a href="updates.html">版本说明</a>。</p>
+<p class="back-top"><a href="#top">↑ 返回顶部</a></p>
+</article>
+</main>
+<footer class="footer"><div class="shell footer-grid"><div><strong>RodentStudio</strong><div><small>© 2026 Ziqing Shi · 开发者：Ziqing Shi</small></div><div><small>独立科研分析软件；科研结果使用前应进行验证。</small></div></div><div class="footer-links"><a href="support.html">支持</a><a href="privacy.html">隐私</a><a href="legal.html">条款与声明</a><a href="accessibility.html">无障碍支持</a></div></div></footer>
+</body>
+</html>
