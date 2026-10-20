@@ -1,0 +1,263 @@
+[
+  {
+    "id": "rodentpose.three_chamber",
+    "name": "Three-Chamber Social Test",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "three_chamber",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.social_interaction",
+    "name": "Social Interaction",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "social_interaction",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.dyadic_social",
+    "name": "Dyadic Social",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "dyadic_social",
+    "automation": "Core ML pose extraction (single animal); the two-animal analysis is not available on the desktop",
+    "availableStage": "pose"
+  },
+  {
+    "id": "rodentpose.head_direction",
+    "name": "Head Direction",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "head_direction",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.spatial_exploration",
+    "name": "Spatial Exploration",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "spatial_exploration",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.open_field",
+    "name": "Open Field",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "open_field",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.epm",
+    "name": "Elevated Plus Maze",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "elevated_plus_maze",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.light_dark_box",
+    "name": "Light–Dark Box",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "light_dark_box",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.nor",
+    "name": "Novel Object Recognition",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "novel_object_recognition",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.barnes_maze",
+    "name": "Barnes Maze",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "barnes_maze",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.y_maze",
+    "name": "Y-Maze",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "y_maze",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.t_maze_vte",
+    "name": "T-Maze with VTE",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "t_maze_vte",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.fear_conditioning",
+    "name": "Fear Conditioning",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "fear_conditioning",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.looming_escape",
+    "name": "Looming Escape",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "looming_escape",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.rotation",
+    "name": "Rotation",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "rotation",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentpose.pose_only",
+    "name": "Pose Tracking Only",
+    "module": "RodentPose",
+    "type": "Pose + 6 keypoint",
+    "originalKey": "pose_only",
+    "automation": "Core ML pose extraction + RodentPose 1.0 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentlimb.cylinder",
+    "name": "Cylinder Test",
+    "module": "RodentLimb",
+    "type": "Limb + 7 keypoint",
+    "originalKey": "cylinder",
+    "automation": "Core ML limb pose extraction + RodentLimb 1.1.2 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentlimb.tail_suspension",
+    "name": "Tail Suspension",
+    "module": "RodentLimb",
+    "type": "Limb + 7 keypoint",
+    "originalKey": "tail_suspension",
+    "automation": "Core ML limb pose extraction + RodentLimb 1.1.2 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentlimb.gait",
+    "name": "Gait",
+    "module": "RodentLimb",
+    "type": "Limb + 7 keypoint",
+    "originalKey": "gait",
+    "automation": "Core ML limb pose extraction + RodentLimb 1.1.2 analyzers and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.open_field",
+    "name": "Open Field / Center",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "open_field",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.elevated_plus_maze",
+    "name": "Elevated Plus Maze",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "elevated_plus_maze",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.light_dark_box",
+    "name": "Light–Dark Box",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "light_dark_box",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.y_maze",
+    "name": "Y-Maze",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "y_maze",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.t_maze",
+    "name": "T-Maze",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "t_maze",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.novel_object_recognition",
+    "name": "Novel Object Recognition",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "novel_object_recognition",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.morris_water_maze",
+    "name": "Morris Water Maze",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "morris_water_maze",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.barnes_maze",
+    "name": "Barnes Maze",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "barnes_maze",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.fear_conditioning",
+    "name": "Fear Conditioning",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "fear_conditioning",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  },
+  {
+    "id": "rodentflow.conditioned_place_preference",
+    "name": "Conditioned Place Preference",
+    "module": "RodentFlow",
+    "type": "Classic centroid video",
+    "originalKey": "conditioned_place_preference",
+    "automation": "RodentFlow 1.3 classic centroid tracker (10 Hz) + AssayEngine and figures (desktop port; iOS parity validation pending)",
+    "availableStage": "results"
+  }
+]

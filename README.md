@@ -42,3 +42,10 @@ Read `PUBLISHING_CHECKLIST_CN.md` and `APP_STORE_CONNECT_URLS.md`. Most importan
 ## Maintenance
 
 Edit `.html` files and `assets/styles.css`, then `git add . && git commit -m "Update support website" && git push`. GitHub Pages republishes after changes to `main`. No Node.js, Python, tracking pixels, analytics or build pipeline required to serve the website; The site uses system fonts and loads no third-party scripts, font resources or tracker pixels.
+
+## Open-source application code
+
+- [iOS/iPadOS + macOS source and Core ML models](source/README.md)
+- [Model weight file manifest](source/MODEL_MANIFEST.md)
+
+This repo also hosts the existing GitHub Pages support and privacy website.

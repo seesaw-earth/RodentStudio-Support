@@ -1,0 +1,13 @@
+{
+  "project": "RodentStudio 0.7.0 TST integration",
+  "xcode_build": "NOT_RUN; macOS SDK unavailable",
+  "tst_swift_sources": 22,
+  "tst_missing_in_project": [],
+  "tst_model_in_target": true,
+  "tst_core_typecheck": "PASS",
+  "xcode_pbxproj_plutil": "PASS",
+  "swift_parse": "PASS",
+  "upstream_tstcore_selected_tests": "4 PASS; full suite timed out",
+  "assay": "tstscorer.multi_chamber",
+  "scientific_validation": "PENDING manual labels and real-video macOS QC"
+}

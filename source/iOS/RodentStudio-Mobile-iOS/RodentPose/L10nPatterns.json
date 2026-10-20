@@ -1,0 +1,457 @@
+[
+  {
+    "regex": "^鼻–鼻接触：鼻尖距离\\ <\\ ([\\s\\S]*?)\\ cm；肛殖区嗅探：鼻尖到对方尾根\\ <\\ ([\\s\\S]*?)\\ cm；身体嗅探：鼻尖到对方身体中心\\ <\\ ([\\s\\S]*?)\\ cm；跟随：间距\\ <\\ ([\\s\\S]*?)\\ cm、两鼠速度\\ >\\ ([\\s\\S]*?)\\ cm/s、跟随者朝向对方\\ ±([\\s\\S]*?)°，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Nose-to-nose contact: nose distance < {0} cm; anogenital sniffing: nose to partner tail base < {1} cm; body sniffing: nose to partner body center < {2} cm; following: distance < {3} cm, both speeds > {4} cm/s and follower faces partner within ±{5}° for ≥ {6} s.",
+    "source": "鼻–鼻接触：鼻尖距离 < {0} cm；肛殖区嗅探：鼻尖到对方尾根 < {1} cm；身体嗅探：鼻尖到对方身体中心 < {2} cm；跟随：间距 < {3} cm、两鼠速度 > {4} cm/s、跟随者朝向对方 ±{5}°，持续 ≥ {6} s。"
+  },
+  {
+    "regex": "^姿态由\\ RodentStudio（YOLO\\ pose，6\\ 个关键点：鼻尖、左耳、右耳、颈部、身体中心、尾根）在设备上([\\s\\S]*?)识别([\\s\\S]*?)；置信度\\ <\\ ([\\s\\S]*?)\\ 的关键点视为缺失，≤\\ ([\\s\\S]*?)\\ s\\ 的缺失做线性插值，并以\\ ([\\s\\S]*?)\\ s\\ 滑动平均平滑。$",
+    "translation": "Pose was estimated on-device with RodentStudio (YOLO pose, six keypoints: nose, left/right ears, neck, body center, tail base) using {0} sampling{1}. Keypoints with confidence < {2} were treated as missing; gaps ≤ {3} s were linearly interpolated, followed by a {4} s moving-average smoothing window.",
+    "source": "姿态由 RodentStudio（YOLO pose，6 个关键点：鼻尖、左耳、右耳、颈部、身体中心、尾根）在设备上{0}识别{1}；置信度 < {2} 的关键点视为缺失，≤ {3} s 的缺失做线性插值，并以 {4} s 滑动平均平滑。"
+  },
+  {
+    "regex": "^探头：鼻尖越出开放臂边缘（距臂轴\\ ≤\\ ([\\s\\S]*?)\\ cm）而身体仍在中央区或开放臂，持续\\ ≥\\ ([\\s\\S]*?)\\ s；伸展评估姿势：鼻尖–尾根长度\\ ≥\\ 中位数\\ ×\\ ([\\s\\S]*?)\\ 且身体中心速度\\ <\\ ([\\s\\S]*?)\\ cm/s，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Head dip: nose projects beyond an open-arm edge (within {0} cm of the arm axis) while the body remains on the maze for ≥ {1} s. SAP: nose-to-tail-base length ≥ median × {2}, with body speed < {3} cm/s for ≥ {4} s.",
+    "source": "探头：鼻尖越出开放臂边缘（距臂轴 ≤ {0} cm）而身体仍在中央区或开放臂，持续 ≥ {1} s；伸展评估姿势：鼻尖–尾根长度 ≥ 中位数 × {2} 且身体中心速度 < {3} cm/s，持续 ≥ {4} s。"
+  },
+  {
+    "regex": "^反应定义为刺激后速度首次超过\\ max\\(([\\s\\S]*?)\\ ×\\ 刺激前\\ ([\\s\\S]*?)\\ s\\ 平均速度,\\ ([\\s\\S]*?)\\ cm/s\\)；有反应且\\ ([\\s\\S]*?)\\ s\\ 内回到巢穴记为逃跑（参考\\ Yilmaz\\ \\&\\ Meister,\\ 2013）。$",
+    "translation": "Response onset is the first post-stimulus speed above max({0} × mean speed over the preceding {1} s, {2} cm/s). A responding trial reaching shelter within {3} s is classified as escape (after Yilmaz & Meister, 2013).",
+    "source": "反应定义为刺激后速度首次超过 max({0} × 刺激前 {1} s 平均速度, {2} cm/s)；有反应且 {3} s 内回到巢穴记为逃跑（参考 Yilmaz & Meister, 2013）。"
+  },
+  {
+    "regex": "^每次从起始臂经过选择点（半径\\ ([\\s\\S]*?)\\ cm）进入左\\ /\\ 右臂记为一次选择；IdPhi\\ 为期间头朝向变化绝对值之和，在会话内\\ z\\ 标准化，zIdPhi\\ ≥\\ ([\\s\\S]*?)\\ 记为\\ VTE。$",
+    "translation": "A choice is recorded when the animal moves from the start arm through a choice point (radius {0} cm) into the left or right arm. IdPhi sums absolute head-direction changes, is z-scored within session, and zIdPhi ≥ {1} is labeled VTE.",
+    "source": "每次从起始臂经过选择点（半径 {0} cm）进入左 / 右臂记为一次选择；IdPhi 为期间头朝向变化绝对值之和，在会话内 z 标准化，zIdPhi ≥ {1} 记为 VTE。"
+  },
+  {
+    "regex": "^身体轴向为尾根\\ →\\ 颈部向量；对展开后的角度分方向累计，每转过完整\\ 360°\\ 记一圈，反向回转超过\\ 90°\\ 时该方向重新计数。俯拍时画面逆时针对应动物左转([\\s\\S]*?)。$",
+    "translation": "Body heading is the tail-base-to-neck vector. Complete 360° turns are counted separately by direction; a reversal > 90° restarts accumulation. In overhead footage, image counterclockwise corresponds to animal left turning{0}.",
+    "source": "身体轴向为尾根 → 颈部向量；对展开后的角度分方向累计，每转过完整 360° 记一圈，反向回转超过 90° 时该方向重新计数。俯拍时画面逆时针对应动物左转{0}。"
+  },
+  {
+    "regex": "^头朝向为两耳中点\\ →\\ 鼻尖向量的方向（鼻尖或两耳缺失时用颈部\\ →\\ 鼻尖）；([\\s\\S]*?)。角速度\\ AHV\\ 为展开后头朝向的中心差分。占据按\\ ([\\s\\S]*?)°\\ 分格累计停留时间。$",
+    "translation": "Head direction is the ear-midpoint-to-nose vector (fallback neck-to-nose if ears or nose unavailable); {0}. AHV is the central difference of unwrapped head direction. Occupancy summed in {1}° bins.",
+    "source": "头朝向为两耳中点 → 鼻尖向量的方向（鼻尖或两耳缺失时用颈部 → 鼻尖）；{0}。角速度 AHV 为展开后头朝向的中心差分。占据按 {1}° 分格累计停留时间。"
+  },
+  {
+    "regex": "^互动区为网罩周围\\ ([\\s\\S]*?)\\ ×\\ ([\\s\\S]*?)\\ cm\\ 区域，角落区为对侧\\ ([\\s\\S]*?)\\ ×\\ ([\\s\\S]*?)\\ cm；按身体中心判断（Golden\\ et\\ al\\.,\\ 2011）。$",
+    "translation": "Interaction zone: {0} × {1} cm around the enclosure; opposite corner zones: {2} × {3} cm. Classified using body center (Golden et al., 2011).",
+    "source": "互动区为网罩周围 {0} × {1} cm 区域，角落区为对侧 {2} × {3} cm；按身体中心判断（Golden et al., 2011）。"
+  },
+  {
+    "regex": "^嗅探定义为鼻尖距杯子外缘\\ ≤\\ ([\\s\\S]*?)\\ cm、头朝向（两耳中点\\ →\\ 鼻尖）与杯子方向夹角\\ ≤\\ ([\\s\\S]*?)°，且身体中心不在杯子上；箱室归属按身体中心判断。$",
+    "translation": "Investigation: nose within {0} cm of cup edge, head-to-cup angle ≤ {1}° (ear midpoint → nose), and body center not on cup; chamber determined by body center.",
+    "source": "嗅探定义为鼻尖距杯子外缘 ≤ {0} cm、头朝向（两耳中点 → 鼻尖）与杯子方向夹角 ≤ {1}°，且身体中心不在杯子上；箱室归属按身体中心判断。"
+  },
+  {
+    "regex": "^探洞定义为鼻尖进入洞口（半径\\ ([\\s\\S]*?)\\ cm\\ \\+\\ ([\\s\\S]*?)\\ cm）持续\\ ≥\\ ([\\s\\S]*?)\\ s；错误为探入非目标洞，同一洞\\ 0\\.2\\ s\\ 内的连续探入合并为一次。$",
+    "translation": "Hole investigation requires the nose to enter a hole region (radius {0} cm + {1} cm) for ≥ {2} s. Non-target holes count as errors; repeat probes of the same hole within 0.2 s are merged.",
+    "source": "探洞定义为鼻尖进入洞口（半径 {0} cm + {1} cm）持续 ≥ {2} s；错误为探入非目标洞，同一洞 0.2 s 内的连续探入合并为一次。"
+  },
+  {
+    "regex": "^物体探索定义为鼻尖距物体外缘（半径\\ ([\\s\\S]*?)\\ cm）≤\\ ([\\s\\S]*?)\\ cm、头朝向与物体方向夹角\\ ≤\\ ([\\s\\S]*?)°，且身体中心不在物体上（排除攀爬）。$",
+    "translation": "Object investigation requires nose within {1} cm of an object edge (radius {0} cm), orientation to object ≤ {2}°, and body center off the object (excluding climbing).",
+    "source": "物体探索定义为鼻尖距物体外缘（半径 {0} cm）≤ {1} cm、头朝向与物体方向夹角 ≤ {2}°，且身体中心不在物体上（排除攀爬）。"
+  },
+  {
+    "regex": "^僵直定义为鼻尖、两耳中点、身体中心和尾根在\\ 0\\.5\\ s\\ 窗口内的平均位移速度\\ <\\ ([\\s\\S]*?)\\ cm/s，且持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Freezing defined as mean displacement speed of nose, ear midpoint, body center and tail base < {0} cm/s in a 0.5 s window, sustained ≥ {1} s.",
+    "source": "僵直定义为鼻尖、两耳中点、身体中心和尾根在 0.5 s 窗口内的平均位移速度 < {0} cm/s，且持续 ≥ {1} s。"
+  },
+  {
+    "regex": "^模型加载失败：([\\s\\S]*?)。请确认\\ ([\\s\\S]*?)\\.mlpackage\\ 在\\ RodentStudio\\ 工程资源中并已加入\\ App\\ target。$",
+    "translation": "Failed to load model: {0}. Confirm that {1}.mlpackage is in the RodentStudio project resources and included in the App target.",
+    "source": "模型加载失败：{0}。请确认 {1}.mlpackage 在 RodentStudio 工程资源中并已加入 App target。"
+  },
+  {
+    "regex": "^占据图按\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)\\ 方格累计身体中心停留时间；运动时段定义为身体中心速度\\ >\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s。$",
+    "translation": "Occupancy map sums body-center dwell time in {0} {1} bins; movement defined as body-center speed > {2} {3}/s.",
+    "source": "占据图按 {0} {1} 方格累计身体中心停留时间；运动时段定义为身体中心速度 > {2} {3}/s。"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 帧需要识别。分析时间段（例如只看前\\ 5\\ 分钟）可以在“标定”页随时调整，不需要重新识别。$",
+    "translation": "Approximately {0} frames will be processed. You can adjust the analysis window (e.g., the first 5 minutes) in Calibration without rerunning detection.",
+    "source": "约 {0} 帧需要识别。分析时间段（例如只看前 5 分钟）可以在“标定”页随时调整，不需要重新识别。"
+  },
+  {
+    "regex": "^所在箱按身体中心判断；探头为鼻尖进入明箱而身体中心和尾根仍在暗箱，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Compartment assigned by body center; head poke requires the nose to enter the light side while body center and tail base remain dark for ≥ {0} s.",
+    "source": "所在箱按身体中心判断；探头为鼻尖进入明箱而身体中心和尾根仍在暗箱，持续 ≥ {0} s。"
+  },
+  {
+    "regex": "^还没有同一编号的“([\\s\\S]*?)”阶段结果；分析完另一阶段后会自动计算\\ SI\\ ratio。$",
+    "translation": "No matching “{0}” phase for this subject yet; the SI ratio will be computed after the other phase is analyzed.",
+    "source": "还没有同一编号的“{0}”阶段结果；分析完另一阶段后会自动计算 SI ratio。"
+  },
+  {
+    "regex": "^中央区为场地中心\\ ([\\s\\S]*?)%（按边长）区域，按身体中心判断。$",
+    "translation": "Center zone is the central {0}% of arena side length; based on body center.",
+    "source": "中央区为场地中心 {0}%（按边长）区域，按身体中心判断。"
+  },
+  {
+    "regex": "^彩色点为探索时的鼻尖位置；虚线圈为\\ ([\\s\\S]*?)\\ cm\\ 判定范围$",
+    "translation": "Colored points mark nose positions during object investigation; dashed rings indicate the {0} cm distance criterion.",
+    "source": "彩色点为探索时的鼻尖位置；虚线圈为 {0} cm 判定范围"
+  },
+  {
+    "regex": "^关键点运动\\ <\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s\\ 持续\\ ≥\\ ([\\s\\S]*?)\\ s$",
+    "translation": "Keypoint movement < {0} {1}/s for ≥ {2} s",
+    "source": "关键点运动 < {0} {1}/s 持续 ≥ {2} s"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ ·\\ ([\\s\\S]*?)\\ 的视频、姿态数据和结果都会被删除。$",
+    "translation": "Videos, pose data and results for {0} · {1} will be deleted.",
+    "source": "{0} · {1} 的视频、姿态数据和结果都会被删除。"
+  },
+  {
+    "regex": "^每次刺激后\\ ([\\s\\S]*?)\\ s\\ 的轨迹；箭头为刺激时的头朝向$",
+    "translation": "Trajectories during {0} s after each stimulus; arrows show head orientation at onset.",
+    "source": "每次刺激后 {0} s 的轨迹；箭头为刺激时的头朝向"
+  },
+  {
+    "regex": "^停留\\ ≥\\ ([\\s\\S]*?)\\ s\\ 的\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)\\ 方格比例$",
+    "translation": "Fraction of {1} {2} bins with occupancy ≥ {0} s",
+    "source": "停留 ≥ {0} s 的 {1} {2} 方格比例"
+  },
+  {
+    "regex": "^zIdPhi\\ ≥\\ ([\\s\\S]*?)；至少\\ 3\\ 次选择才计算$",
+    "translation": "zIdPhi ≥ {0}; requires at least 3 choices",
+    "source": "zIdPhi ≥ {0}；至少 3 次选择才计算"
+  },
+  {
+    "regex": "^停留\\ ≥\\ ([\\s\\S]*?)\\ s\\ 的\\ ([\\s\\S]*?)°\\ 方向格比例$",
+    "translation": "Fraction of {1}° directional bins with occupancy ≥ {0} s",
+    "source": "停留 ≥ {0} s 的 {1}° 方向格比例"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 帧\\ ·\\ ([\\s\\S]*?)\\ ·\\ ([\\s\\S]*?)([\\s\\S]*?)$",
+    "translation": "About {0} frames · {1} · {2}{3}",
+    "source": "约 {0} 帧 · {1} · {2}{3}"
+  },
+  {
+    "regex": "^\\(([\\s\\S]*?)\\ −\\ ([\\s\\S]*?)\\)\\ ÷\\ 总嗅探时间$",
+    "translation": "({0} − {1}) / total investigation time",
+    "source": "({0} − {1}) ÷ 总嗅探时间"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 帧\\ ·\\ 平均\\ ([\\s\\S]*?)\\ ms/帧$",
+    "translation": "{0} frames · average {1} ms/frame",
+    "source": "{0} 帧 · 平均 {1} ms/帧"
+  },
+  {
+    "regex": "^身体中心停留时间；方格\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)$",
+    "translation": "Body-center occupancy, cell size {0} {1}",
+    "source": "身体中心停留时间；方格 {0} {1}"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 一个点；阴影为\\ CS$",
+    "translation": "One point per {0}; shaded regions are CS events",
+    "source": "每 {0} 一个点；阴影为 CS"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)（横轴单位\\ min）$",
+    "translation": "Every {0} (x-axis in min)",
+    "source": "每 {0}（横轴单位 min）"
+  },
+  {
+    "regex": "^身体中心间距\\ <\\ ([\\s\\S]*?)\\ cm$",
+    "translation": "Body-center distance < {0} cm",
+    "source": "身体中心间距 < {0} cm"
+  },
+  {
+    "regex": "^速度\\ >\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s$",
+    "translation": "Speed > {0} {1}/s",
+    "source": "速度 > {0} {1}/s"
+  },
+  {
+    "regex": "^速度\\ >\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s$",
+    "translation": "Speed > {0} {1}/s",
+    "source": "速度 > {0} {1}/s"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ ·\\ 剩余\\ ([\\s\\S]*?)$",
+    "translation": "{0} · {1} remaining",
+    "source": "{0} · 剩余 {1}"
+  },
+  {
+    "regex": "^姿态数据保存失败：([\\s\\S]*?)$",
+    "translation": "Failed to save pose data: {0}",
+    "source": "姿态数据保存失败：{0}"
+  },
+  {
+    "regex": "^CS\\ 时长\\ ([\\s\\S]*?)\\ s$",
+    "translation": "CS duration {0} s",
+    "source": "CS 时长 {0} s"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 的移动距离$",
+    "translation": "Distance traveled per {0}",
+    "source": "每 {0} 的移动距离"
+  },
+  {
+    "regex": "^第\\ ([\\s\\S]*?)\\ 步：([\\s\\S]*?)$",
+    "translation": "Step {0}: {1}",
+    "source": "第 {0} 步：{1}"
+  },
+  {
+    "regex": "^实时预览\\ ·\\ ([\\s\\S]*?)$",
+    "translation": "Live preview · {0}",
+    "source": "实时预览 · {0}"
+  },
+  {
+    "regex": "^导出汇总表（([\\s\\S]*?)）$",
+    "translation": "Export summary ({0})",
+    "source": "导出汇总表（{0}）"
+  },
+  {
+    "regex": "^正在识别\\ ·\\ ([\\s\\S]*?)$",
+    "translation": "Analyzing · {0}",
+    "source": "正在识别 · {0}"
+  },
+  {
+    "regex": "^\\ ·\\ 组别\\ ([\\s\\S]*?)$",
+    "translation": " · group {0}",
+    "source": " · 组别 {0}"
+  },
+  {
+    "regex": "^累计\\ ([\\s\\S]*?)\\ 曲线$",
+    "translation": "Cumulative {0} curve",
+    "source": "累计 {0} 曲线"
+  },
+  {
+    "regex": "^置信度\\ ≥\\ ([\\s\\S]*?)$",
+    "translation": "Confidence ≥ {0}",
+    "source": "置信度 ≥ {0}"
+  },
+  {
+    "regex": "^CS([\\s\\S]*?)\\ 僵直$",
+    "translation": "Freezing during CS{0}",
+    "source": "CS{0} 僵直"
+  },
+  {
+    "regex": "^保存失败：([\\s\\S]*?)$",
+    "translation": "Save failed: {0}",
+    "source": "保存失败：{0}"
+  },
+  {
+    "regex": "^全部\\ ([\\s\\S]*?)\\ 个$",
+    "translation": "All {0} assays",
+    "source": "全部 {0} 个"
+  },
+  {
+    "regex": "^单位\\ ([\\s\\S]*?)/s$",
+    "translation": "Units: {0}/s",
+    "source": "单位 {0}/s"
+  },
+  {
+    "regex": "^回看\\ ·\\ ([\\s\\S]*?)$",
+    "translation": "Review · {0}",
+    "source": "回看 · {0}"
+  },
+  {
+    "regex": "^导入失败：([\\s\\S]*?)$",
+    "translation": "Import failed: {0}",
+    "source": "导入失败：{0}"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 分钟$",
+    "translation": "About {0} min",
+    "source": "约 {0} 分钟"
+  },
+  {
+    "regex": "^臂\\ ([\\s\\S]*?)\\ 时间$",
+    "translation": "Arm {0} time",
+    "source": "臂 {0} 时间"
+  },
+  {
+    "regex": "^识别失败：([\\s\\S]*?)$",
+    "translation": "Detection failed: {0}",
+    "source": "识别失败：{0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)探索次数$",
+    "translation": "{0} investigation bouts",
+    "source": "{0}探索次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)探索次数$",
+    "translation": "{0} investigation bouts",
+    "source": "{0}探索次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)嗅探次数$",
+    "translation": "{0} sniffing bouts",
+    "source": "{0}嗅探次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)嗅探次数$",
+    "translation": "{0} sniffing bouts",
+    "source": "{0}嗅探次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 次分析$",
+    "translation": "{0} analyses",
+    "source": "{0} 次分析"
+  },
+  {
+    "regex": "^开放臂\\ ([\\s\\S]*?)$",
+    "translation": "Open arm {0}",
+    "source": "开放臂 {0}"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 帧$",
+    "translation": "Every {0} frames",
+    "source": "每 {0} 帧"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 秒$",
+    "translation": "About {0} sec",
+    "source": "约 {0} 秒"
+  },
+  {
+    "regex": "^进入臂\\ ([\\s\\S]*?)$",
+    "translation": "Entry into arm {0}",
+    "source": "进入臂 {0}"
+  },
+  {
+    "regex": "^闭合臂\\ ([\\s\\S]*?)$",
+    "translation": "Closed arm {0}",
+    "source": "闭合臂 {0}"
+  },
+  {
+    "regex": "^首次嗅探([\\s\\S]*?)$",
+    "translation": "First sniff of {0}",
+    "source": "首次嗅探{0}"
+  },
+  {
+    "regex": "^首次嗅探([\\s\\S]*?)$",
+    "translation": "First sniff of {0}",
+    "source": "首次嗅探{0}"
+  },
+  {
+    "regex": "^首次探索([\\s\\S]*?)$",
+    "translation": "First investigation of {0}",
+    "source": "首次探索{0}"
+  },
+  {
+    "regex": "^首次探索([\\s\\S]*?)$",
+    "translation": "First investigation of {0}",
+    "source": "首次探索{0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧箱室$",
+    "translation": "{0}-side chamber",
+    "source": "{0}侧箱室"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧箱室$",
+    "translation": "{0}-side chamber",
+    "source": "{0}侧箱室"
+  },
+  {
+    "regex": "^占用\\ ([\\s\\S]*?)$",
+    "translation": "Using {0}",
+    "source": "占用 {0}"
+  },
+  {
+    "regex": "^手柄\\ ([\\s\\S]*?)$",
+    "translation": "Handle {0}",
+    "source": "手柄 {0}"
+  },
+  {
+    "regex": "^版本\\ ([\\s\\S]*?)$",
+    "translation": "Version {0}",
+    "source": "版本 {0}"
+  },
+  {
+    "regex": "^物体\\ ([\\s\\S]*?)$",
+    "translation": "Object {0}",
+    "source": "物体 {0}"
+  },
+  {
+    "regex": "^编号\\ ([\\s\\S]*?)$",
+    "translation": "Subject {0}",
+    "source": "编号 {0}"
+  },
+  {
+    "regex": "^进入([\\s\\S]*?)侧$",
+    "translation": "Entries on {0} side",
+    "source": "进入{0}侧"
+  },
+  {
+    "regex": "^进入([\\s\\S]*?)侧$",
+    "translation": "Entries on {0} side",
+    "source": "进入{0}侧"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 帧$",
+    "translation": "{0} frames",
+    "source": "{0} 帧"
+  },
+  {
+    "regex": "^([\\s\\S]*?)有效$",
+    "translation": "Valid {0}",
+    "source": "{0}有效"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 次$",
+    "translation": "{0} events",
+    "source": "{0} 次"
+  },
+  {
+    "regex": "^嗅探([\\s\\S]*?)$",
+    "translation": "Sniffing {0}",
+    "source": "嗅探{0}"
+  },
+  {
+    "regex": "^嗅探([\\s\\S]*?)$",
+    "translation": "Sniffing {0}",
+    "source": "嗅探{0}"
+  },
+  {
+    "regex": "^帧\\ ([\\s\\S]*?)$",
+    "translation": "Frame {0}",
+    "source": "帧 {0}"
+  },
+  {
+    "regex": "^探索([\\s\\S]*?)$",
+    "translation": "Investigating {0}",
+    "source": "探索{0}"
+  },
+  {
+    "regex": "^探索([\\s\\S]*?)$",
+    "translation": "Investigating {0}",
+    "source": "探索{0}"
+  },
+  {
+    "regex": "^新\\ ([\\s\\S]*?)$",
+    "translation": "Novel {0}",
+    "source": "新 {0}"
+  },
+  {
+    "regex": "^旧\\ ([\\s\\S]*?)$",
+    "translation": "Familiar {0}",
+    "source": "旧 {0}"
+  },
+  {
+    "regex": "^臂\\ ([\\s\\S]*?)$",
+    "translation": "Arm {0}",
+    "source": "臂 {0}"
+  },
+  {
+    "regex": "^臂\\ ([\\s\\S]*?)$",
+    "translation": "Arm {0}",
+    "source": "臂 {0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧$",
+    "translation": "{0} side",
+    "source": "{0}侧"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧$",
+    "translation": "{0} side",
+    "source": "{0}侧"
+  }
+]

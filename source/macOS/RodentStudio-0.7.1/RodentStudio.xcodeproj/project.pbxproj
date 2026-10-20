@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A7100000000000000000002 = { isa = PBXBuildFile; fileRef = 9A7100000000000000000001 /* TSTSessionMetrics.swift */; };
+		0F37AF73A9FD40C4B1C6FE5E = { isa = PBXBuildFile; fileRef = C8FC3751BD024D878C92B7D7 /* TSTTaskWorkspaceView.swift */; };
+		8955EBDAF7F445BC9713ABC1 = { isa = PBXBuildFile; fileRef = ED29D64AC7BA43098A4AF7A3 /* Core/CSVExport.swift */; };
+		4B1E8C01AADE41EAAD237DCD = { isa = PBXBuildFile; fileRef = 4500461C542D4F85A4B588F6 /* Core/ChamberDetector.swift */; };
+		9B55C0FC2E514E7285B50B04 = { isa = PBXBuildFile; fileRef = 92A74C840F7C44DCA98686E1 /* Core/Detection.swift */; };
+		1227648BB31748AF990E9B60 = { isa = PBXBuildFile; fileRef = 301C8A4FC8C64184BECACC50 /* Core/GrayImage.swift */; };
+		6B2F96304F024AABAF9CB9B1 = { isa = PBXBuildFile; fileRef = 0744F0C962FE4E959FE9527B /* Core/ImageOps.swift */; };
+		2B093856CDBB4B8AA4F59A9A = { isa = PBXBuildFile; fileRef = 84FCD0E4A3F640B5AF813546 /* Core/MotionAnalyzer.swift */; };
+		6265CC5412F44F84A1C1B1B3 = { isa = PBXBuildFile; fileRef = 29B99A1013B54878B4DEB31F /* Core/Scorer.swift */; };
+		FFA764EF790748EBBD5D8D5C = { isa = PBXBuildFile; fileRef = 23D5E309C00E49F3930F3DC8 /* Core/Settings.swift */; };
+		A99A737B7F1B45E1A39EC1E0 = { isa = PBXBuildFile; fileRef = 226ED17D98F5408584B70AEA /* Model/AppModel.swift */; };
+		91126C05A52C4CAF83DA5A9C = { isa = PBXBuildFile; fileRef = F5A660B35A4A4CB0B9ED7689 /* Video/ImageRendering.swift */; };
+		722B1E7153FE40BF922D438A = { isa = PBXBuildFile; fileRef = EABA446ECA5848368ED69100 /* Video/VideoFrameReader.swift */; };
+		A2DF501A22E1462F8FE953E4 = { isa = PBXBuildFile; fileRef = 6264D15B7E1547EDABCA627A /* Detection/YOLOMouseDetector.swift */; };
+		1124857F2C3449BF892F1A9E = { isa = PBXBuildFile; fileRef = 96B4D3FFC3E84383BC9F4FF7 /* Views/AnalyzingView.swift */; };
+		5C960B4CE895485EBC1FC7B6 = { isa = PBXBuildFile; fileRef = F4B2AB34C10C4689B07617C8 /* Views/CalibrationView.swift */; };
+		9D999B4406CD4BC585CA36B8 = { isa = PBXBuildFile; fileRef = 6ECAEA84BD7946B4A41C3923 /* Views/ChamberEditor.swift */; };
+		7325095B9D7D4CF890392D1F = { isa = PBXBuildFile; fileRef = DE3034887AFA4AE083F4DDE0 /* Views/ChambersView.swift */; };
+		B3E99CB1915E4E10B1045E29 = { isa = PBXBuildFile; fileRef = EF13350123E849AC80354C96 /* Views/HomeView.swift */; };
+		20E792988ED54F268D3C3DA5 = { isa = PBXBuildFile; fileRef = 473FE4ADEFA94B068E365B99 /* Views/KeyFrameView.swift */; };
+		09917B0899CA42FF9C35DB61 = { isa = PBXBuildFile; fileRef = BE6780970405406FB9392967 /* Views/ResultsView.swift */; };
+		BA4A8C70D2E54645B8EAC42C = { isa = PBXBuildFile; fileRef = C4C0FACE29234AAF9EA42BC1 /* Views/ScanView.swift */; };
+		1CD021B5499E4262A30C41E8 = { isa = PBXBuildFile; fileRef = D627A5F00311409D8BB57E1F /* Views/TSTMultiSettingsView.swift */; };
+		1B6D424AC01748EC814C5985 = { isa = PBXBuildFile; fileRef = 128AF7F78E2D42C0BB8DA4F4 /* MouseDetector.mlpackage */; };
+
+		A06100000000000000000002 = { isa = PBXBuildFile; fileRef = A06100000000000000000001 /* TaskMergePolicy.swift */; };
+		A04100000000000000000002 = { isa = PBXBuildFile; fileRef = A04100000000000000000001 /* NativeTrackingVisualization.swift */; };
+		4880F03AD67604D1C159BE3B = { isa = PBXBuildFile; fileRef = 147E7AE9C2772ED5345AF06E /* ReviewSupport.swift */; };
+		2289C0315ABB5B9A6110717C = { isa = PBXBuildFile; fileRef = A2B0E0900CBA17E4AB9524A3 /* TaskOverviewViews.swift */; };
+		54DE17F066C911358AA6D8FD = { isa = PBXBuildFile; fileRef = E226A3A588001D4B09E05569 /* GroupCharts.swift */; };
+		79B78FC9015A2AA7A846A218 = { isa = PBXBuildFile; fileRef = E831743416C55FC5AA469C37 /* TrackingCheckViews.swift */; };
+		A2BA1E2E61D3F8C6F4DCEE1E = { isa = PBXBuildFile; fileRef = 92FC52699CB634519CF67317 /* ImportVideosSheet.swift */; };
+		0CC24A043C60255EAAD862B4 = { isa = PBXBuildFile; fileRef = 261CFF789A2701546E547761 /* TaskDataExport.swift */; };
+		4075362BE7D004A1BED5A639 = { isa = PBXBuildFile; fileRef = 1A333D3EE3F7BCA08E983864 /* TaskDataModel.swift */; };
+		E6936E291AFC44FAFD982F75 = { isa = PBXBuildFile; fileRef = E554839A1372B994C2F39125 /* SessionMetrics.swift */; };
+		CBA67502EC23F4BE202F7994 = { isa = PBXBuildFile; fileRef = 04B26D298867FC240CE53F7B /* SessionResultsEngine.swift */; };
+		69F7A4F5D7F632347DE67305 = { isa = PBXBuildFile; fileRef = FAD15F624165554CFF6AFB40 /* GroupAnalysis.swift */; };
+		857CCDDB4FB238A6F6C1E584 = { isa = PBXBuildFile; fileRef = D51154D7488AEF87F11B652C /* StatsEngine.swift */; };
+		8D48DF41B8A37B726667852A = { isa = PBXBuildFile; fileRef = 0F792D7748593C974778B3B5 /* SessionModel.swift */; };
+		2852D4965D5557A4E39FFD5B = { isa = PBXBuildFile; fileRef = 993D35B8FD3E2635BDAF86AF /* AppInfo.swift */; };
+		D4DF9A47617DAF56DA20C307 = { isa = PBXBuildFile; fileRef = C633A448CC50D35D7A2FDEAE /* RodentFlowChinese.json */; };
+		6C98ACEBCB38B789244856F0 = { isa = PBXBuildFile; fileRef = 597A2413EEEE171C8B0BE10F /* L10nPatterns.json */; };
+		ECF61C9293A4CEB4AE2D02B5 = { isa = PBXBuildFile; fileRef = E21F73BF0F231B6123572EB9 /* EnglishTranslations.json */; };
+		B93D4C1AE2BEA1943F1B8988 = { isa = PBXBuildFile; fileRef = 786AEE3401B150504CD46CD4 /* FlowMetricCatalog.swift */; };
+		23CA1E32C330D4618AE23FC3 = { isa = PBXBuildFile; fileRef = 539C0B828E835F07640BC66B /* VideoReview.swift */; };
+		EE1C3A407DBC7AC7F240BFB3 = { isa = PBXBuildFile; fileRef = 68EFB61AA71A6A749BA0E110 /* TaskResultsView.swift */; };
+		2C8ADE03BEBC4C367DAA7E32 = { isa = PBXBuildFile; fileRef = E06F283723B0C01870E5D732 /* FlowResultFigures.swift */; };
+		2AD3456DF0075E414A0AB8DE = { isa = PBXBuildFile; fileRef = 7D2F799A6BF885FC03AE97BB /* LimbResultFigures.swift */; };
+		324297F503D027D3D5A05E76 = { isa = PBXBuildFile; fileRef = 6D349717E0C4A2A74F9F5DCB /* PoseResultFigures.swift */; };
+		CEC095E3A079D692849BC8B2 = { isa = PBXBuildFile; fileRef = 0F97E28DE2DA80192FA798BF /* FigureSupport.swift */; };
+		5F96C5D0F63C546372C86DF6 = {
+			isa = PBXBuildFile; fileRef = 4C32A8B16C20383049846795 /* AnalysisModels.swift */;
+		};
+		286C39BB55F8A6710DDB862F = {
+			isa = PBXBuildFile; fileRef = EBF6A9FE98AF4CA2CFE3B518 /* CylinderAnalyzer.swift */;
+		};
+		C5E2A9D414407D75BA265529 = {
+			isa = PBXBuildFile; fileRef = B2E9AA2ED6E2F03F8AD59AE0 /* GaitAnalyzer.swift */;
+		};
+		9602A25012B7B61D6B72BDB1 = {
+			isa = PBXBuildFile; fileRef = 09C326EB60666A646BF24327 /* L10n.swift */;
+		};
+		32BE23F1E0F9799977A235F0 = {
+			isa = PBXBuildFile; fileRef = B11E38C2F6FF7DE30B4EAAC1 /* NativeLimbAdapter.swift */;
+		};
+		EA56931719E9AC5DCA97BE2B = {
+			isa = PBXBuildFile; fileRef = 8DFCE1D4B2509B6C4B748355 /* PoseSeries.swift */;
+		};
+		7CACEB5D1D44B10644442076 = {
+			isa = PBXBuildFile; fileRef = 742F96798AA2C4583F3B750B /* PoseTypes.swift */;
+		};
+		3AB0D8CE139310D06DDE3BBB = {
+			isa = PBXBuildFile; fileRef = 54B0D1F352FF91E6812B8945 /* TSTAnalyzer.swift */;
+		};
+		9D75C2C208DEF7495DFAE3AC = {
+			isa = PBXBuildFile; fileRef = 7FD09AC0741FB8044B0F6730 /* RodentStudioApp.swift */;
+		};
+		8962CABB5BB3CC41CC887E84 = {
+			isa = PBXBuildFile; fileRef = 64B8FD3698C6792CB1DFA4DB /* NativeModelCatalog.swift */;
+		};
+		41D511C05B9A0EE1E679CD1E = {
+			isa = PBXBuildFile; fileRef = A05800EFAEB9200119F5735C /* WorkspaceStore.swift */;
+		};
+		51BFA06B84C45195B6D61739 = {
+			isa = PBXBuildFile; fileRef = 51E41ED93BCC2EB9147B4E14 /* LegacyProjectInspector.swift */;
+		};
+		6B8FB28AA5CAD119B53F69A2 = {
+			isa = PBXBuildFile; fileRef = CD76ECE628383B21B3CC4732 /* MainView.swift */;
+		};
+		D7D7CAEE9F5F230F8E51A085 = {
+			isa = PBXBuildFile; fileRef = 4B7EF2CE172C916B8021D249 /* PoseTrackAnalysisView.swift */;
+		};
+		F9FFCE611726574CD0162ABA = {
+			isa = PBXBuildFile; fileRef = E307473D1315F2CA1290C215 /* Assets.xcassets */;
+		};
+		AB0000020000000000000001 = { isa = PBXBuildFile; fileRef = AB0000010000000000000001 /* MousePose6_960_int8.mlpackage */; };
+		AB0000020000000000000002 = { isa = PBXBuildFile; fileRef = AB0000010000000000000002 /* CylinderMousePoseV2.mlpackage */; };
+		AB0000020000000000000003 = { isa = PBXBuildFile; fileRef = AB0000010000000000000003 /* ModelInferenceCheckView.swift */; };
+		AB0000040000000000000001 = { isa = PBXBuildFile; fileRef = AB0000050000000000000001 /* NativeVideoTrackingEngine.swift */; };
+		AB0000040000000000000002 = { isa = PBXBuildFile; fileRef = AB0000050000000000000002 /* NativeVideoTrackingView.swift */; };
+		DA0200000000000000000001 = { isa = PBXBuildFile; fileRef = DA0100000000000000000001 /* DesktopAssayCatalog.swift */; };
+		DA0200000000000000000002 = { isa = PBXBuildFile; fileRef = DA0100000000000000000002 /* LongVideoTrackingEngine.swift */; };
+		DA0200000000000000000003 = { isa = PBXBuildFile; fileRef = DA0100000000000000000003 /* DesktopAssayCatalogView.swift */; };
+		DA0200000000000000000004 = { isa = PBXBuildFile; fileRef = DA0100000000000000000004 /* LongVideoTrackingView.swift */; };
+		FD0200000000000000000001 = { isa = PBXBuildFile; fileRef = FD0100000000000000000001 /* DesktopCalibration.swift */; };
+		DD2000010000000000000001 = { isa = PBXBuildFile; fileRef = DD1000010000000000000001 /* ScientificExportService.swift */; };
+		DD2000010000000000000002 = { isa = PBXBuildFile; fileRef = DD1000010000000000000002 /* NativeRunSession.swift */; };
+		DD2000010000000000000003 = { isa = PBXBuildFile; fileRef = DD1000010000000000000003 /* TrackingReviewEvents.swift */; };
+		DD2000010000000000000004 = { isa = PBXBuildFile; fileRef = DD1000010000000000000004 /* ReviewExportView.swift */; };
+		EE0200000000000000000001 = { isa = PBXBuildFile; fileRef = EE0100000000000000000001 /* FlowSetupModel.swift */; };
+		EE0200000000000000000002 = { isa = PBXBuildFile; fileRef = EE0100000000000000000002 /* PoseGeometry.swift */; };
+		EE0200000000000000000003 = { isa = PBXBuildFile; fileRef = EE0100000000000000000003 /* PoseParadigms.swift */; };
+		EE0200000000000000000004 = { isa = PBXBuildFile; fileRef = EE0100000000000000000004 /* PoseSetupModel.swift */; };
+		EE0200000000000000000005 = { isa = PBXBuildFile; fileRef = EE0100000000000000000005 /* PoseZones.swift */; };
+		EE0200000000000000000006 = { isa = PBXBuildFile; fileRef = EE0100000000000000000006 /* TaskSetup.swift */; };
+		EE0200000000000000000007 = { isa = PBXBuildFile; fileRef = EE0100000000000000000007 /* AdvancedView.swift */; };
+		EE0200000000000000000008 = { isa = PBXBuildFile; fileRef = EE0100000000000000000008 /* AnalysisWorkflowView.swift */; };
+		EE0200000000000000000009 = { isa = PBXBuildFile; fileRef = EE0100000000000000000009 /* CalibrationControls.swift */; };
+		EE020000000000000000000A = { isa = PBXBuildFile; fileRef = EE010000000000000000000A /* DataOverviewView.swift */; };
+		EE020000000000000000000B = { isa = PBXBuildFile; fileRef = EE010000000000000000000B /* FlowCalibrationEditor.swift */; };
+		EE020000000000000000000C = { isa = PBXBuildFile; fileRef = EE010000000000000000000C /* LimbCalibrationEditor.swift */; };
+		EE020000000000000000000D = { isa = PBXBuildFile; fileRef = EE010000000000000000000D /* PoseCalibrationEditor.swift */; };
+		EE020000000000000000000E = { isa = PBXBuildFile; fileRef = EE010000000000000000000E /* SettingsView.swift */; };
+		EE020000000000000000000F = { isa = PBXBuildFile; fileRef = EE010000000000000000000F /* TaskCalibrationView.swift */; };
+		EE0200000000000000000010 = { isa = PBXBuildFile; fileRef = EE0100000000000000000010 /* TaskRunViews.swift */; };
+		C49E87A372C34A6997AC15EF = { isa = PBXBuildFile; fileRef = A2CDF34A60E341BBB4201BDE /* AnnotatedVideoExporter.swift */; };
+		2A40A6186B5A4F0E8C64DE37 = { isa = PBXBuildFile; fileRef = 91EC7C8FA2B444D39C5C5112 /* AnalysisCore.swift */; };
+		99A948E1121048818D6142B2 = { isa = PBXBuildFile; fileRef = 5CA4811B7F0640879A8BCB72 /* AnalysisReport.swift */; };
+		7C41953F8D8D4EF68B54CC80 = { isa = PBXBuildFile; fileRef = C4F391C27AC74FB49D34D004 /* AnalyzersAnxiety.swift */; };
+		47D0C6602E9E4B928BF6089C = { isa = PBXBuildFile; fileRef = 0E5F89D6F5C047E39E32E802 /* AnalyzersMemory.swift */; };
+		A7DA2892D14B474C8B6112BF = { isa = PBXBuildFile; fileRef = 9F52D0B70C0D442BB3E25070 /* AnalyzersSocial.swift */; };
+		1E446AF95D6B49C1AD5FD819 = { isa = PBXBuildFile; fileRef = 2116FA218D3E4114BCEA3E07 /* AnalyzersSpace.swift */; };
+		389ECDBD5DBB4EA89B3F745B = { isa = PBXBuildFile; fileRef = 40EE6EF362054E219CC6D082 /* Keypoints.swift */; };
+		4E6022AF203A4FA88C51F9AB = { isa = PBXBuildFile; fileRef = FBF222E867A94B7283198A83 /* Kinematics.swift */; };
+		BFA17699529748F385A371D5 = { isa = PBXBuildFile; fileRef = D6BC5642C7C04B6886BBE956 /* PoseScienceBridge.swift */; };
+		194B927E11774C56B3FCF32C = { isa = PBXBuildFile; fileRef = 489179D575EE4E32BBBBEBE7 /* PoseTrack.swift */; };
+		7A7003C2F563422EBC368DFD = { isa = PBXBuildFile; fileRef = 8651E6E8760647EEA50DE9BF /* RPTexts.swift */; };
+		5B50B3AAC96C4AE38CDC90E9 = { isa = PBXBuildFile; fileRef = 1A414864B2374F3DA00AEC23 /* ScienceSession.swift */; };
+		79D3770D92BA4EE0B6786BE4 = { isa = PBXBuildFile; fileRef = 28E22969B3254D37BD097051 /* FlowDesktopRun.swift */; };
+		5E09F9F19617494BB09C6BD7 = { isa = PBXBuildFile; fileRef = 78069BD0B5A040A8A2EE4D78 /* FlowTrackingPoint.swift */; };
+		817B8CB123F04430A0479D08 = { isa = PBXBuildFile; fileRef = D0F6DFCB809C4155B887BAD6 /* FrameExtractor.swift */; };
+		D5A6D1407CDA49A59A3787B2 = { isa = PBXBuildFile; fileRef = 24642F5AE8C1416E87BAAAAF /* FullVideoAnalyzer.swift */; };
+		4822B444E6F34D06A42BDA10 = { isa = PBXBuildFile; fileRef = ED061E0F1F0144F29AD7660F /* NativeMouseTracker.swift */; };
+		383BAD1CAA5B4842815267D9 = { isa = PBXBuildFile; fileRef = B18DABE19C1C48AD9182C1DB /* FlowAssayModels.swift */; };
+		504A093E53024E43A6158F74 = { isa = PBXBuildFile; fileRef = E0B552EDAF4B44B08CC42BD1 /* AssayEngine.swift */; };
+		48405835BB354F638E093189 = { isa = PBXBuildFile; fileRef = C87B270C35174F789D0EBD26 /* PoseScienceLongLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A7100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTSessionMetrics.swift; sourceTree = "<group>"; };
+		C8FC3751BD024D878C92B7D7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTTaskWorkspaceView.swift; sourceTree = "<group>"; };
+		ED29D64AC7BA43098A4AF7A3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/CSVExport.swift"; sourceTree = "<group>"; };
+		4500461C542D4F85A4B588F6 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/ChamberDetector.swift"; sourceTree = "<group>"; };
+		92A74C840F7C44DCA98686E1 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/Detection.swift"; sourceTree = "<group>"; };
+		301C8A4FC8C64184BECACC50 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/GrayImage.swift"; sourceTree = "<group>"; };
+		0744F0C962FE4E959FE9527B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/ImageOps.swift"; sourceTree = "<group>"; };
+		84FCD0E4A3F640B5AF813546 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/MotionAnalyzer.swift"; sourceTree = "<group>"; };
+		29B99A1013B54878B4DEB31F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/Scorer.swift"; sourceTree = "<group>"; };
+		23D5E309C00E49F3930F3DC8 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core/Settings.swift"; sourceTree = "<group>"; };
+		226ED17D98F5408584B70AEA = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model/AppModel.swift"; sourceTree = "<group>"; };
+		F5A660B35A4A4CB0B9ED7689 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Video/ImageRendering.swift"; sourceTree = "<group>"; };
+		EABA446ECA5848368ED69100 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Video/VideoFrameReader.swift"; sourceTree = "<group>"; };
+		6264D15B7E1547EDABCA627A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detection/YOLOMouseDetector.swift"; sourceTree = "<group>"; };
+		96B4D3FFC3E84383BC9F4FF7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/AnalyzingView.swift"; sourceTree = "<group>"; };
+		F4B2AB34C10C4689B07617C8 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/CalibrationView.swift"; sourceTree = "<group>"; };
+		6ECAEA84BD7946B4A41C3923 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/ChamberEditor.swift"; sourceTree = "<group>"; };
+		DE3034887AFA4AE083F4DDE0 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/ChambersView.swift"; sourceTree = "<group>"; };
+		EF13350123E849AC80354C96 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/HomeView.swift"; sourceTree = "<group>"; };
+		473FE4ADEFA94B068E365B99 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/KeyFrameView.swift"; sourceTree = "<group>"; };
+		BE6780970405406FB9392967 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/ResultsView.swift"; sourceTree = "<group>"; };
+		C4C0FACE29234AAF9EA42BC1 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/ScanView.swift"; sourceTree = "<group>"; };
+		D627A5F00311409D8BB57E1F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/TSTMultiSettingsView.swift"; sourceTree = "<group>"; };
+		128AF7F78E2D42C0BB8DA4F4 = { isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Models/MouseDetector.mlpackage"; sourceTree = "<group>"; };
+
+		A06100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMergePolicy.swift; sourceTree = "<group>"; };
+		A04100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTrackingVisualization.swift; sourceTree = "<group>"; };
+		147E7AE9C2772ED5345AF06E = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSupport.swift; sourceTree = "<group>"; };
+		A2B0E0900CBA17E4AB9524A3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOverviewViews.swift; sourceTree = "<group>"; };
+		E226A3A588001D4B09E05569 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCharts.swift; sourceTree = "<group>"; };
+		E831743416C55FC5AA469C37 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingCheckViews.swift; sourceTree = "<group>"; };
+		92FC52699CB634519CF67317 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportVideosSheet.swift; sourceTree = "<group>"; };
+		261CFF789A2701546E547761 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataExport.swift; sourceTree = "<group>"; };
+		1A333D3EE3F7BCA08E983864 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataModel.swift; sourceTree = "<group>"; };
+		E554839A1372B994C2F39125 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMetrics.swift; sourceTree = "<group>"; };
+		04B26D298867FC240CE53F7B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResultsEngine.swift; sourceTree = "<group>"; };
+		FAD15F624165554CFF6AFB40 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAnalysis.swift; sourceTree = "<group>"; };
+		D51154D7488AEF87F11B652C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsEngine.swift; sourceTree = "<group>"; };
+		0F792D7748593C974778B3B5 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		993D35B8FD3E2635BDAF86AF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		C633A448CC50D35D7A2FDEAE = { isa = PBXFileReference; lastKnownFileType = text.json; path = RodentFlowChinese.json; sourceTree = "<group>"; };
+		597A2413EEEE171C8B0BE10F = { isa = PBXFileReference; lastKnownFileType = text.json; path = L10nPatterns.json; sourceTree = "<group>"; };
+		E21F73BF0F231B6123572EB9 = { isa = PBXFileReference; lastKnownFileType = text.json; path = EnglishTranslations.json; sourceTree = "<group>"; };
+		786AEE3401B150504CD46CD4 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowMetricCatalog.swift; sourceTree = "<group>"; };
+		539C0B828E835F07640BC66B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReview.swift; sourceTree = "<group>"; };
+		68EFB61AA71A6A749BA0E110 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResultsView.swift; sourceTree = "<group>"; };
+		E06F283723B0C01870E5D732 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowResultFigures.swift; sourceTree = "<group>"; };
+		7D2F799A6BF885FC03AE97BB = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimbResultFigures.swift; sourceTree = "<group>"; };
+		6D349717E0C4A2A74F9F5DCB = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseResultFigures.swift; sourceTree = "<group>"; };
+		0F97E28DE2DA80192FA798BF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureSupport.swift; sourceTree = "<group>"; };
+		4C32A8B16C20383049846795 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnalysisModels.swift"; sourceTree = "<group>";
+		};
+		EBF6A9FE98AF4CA2CFE3B518 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CylinderAnalyzer.swift"; sourceTree = "<group>";
+		};
+		B2E9AA2ED6E2F03F8AD59AE0 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaitAnalyzer.swift"; sourceTree = "<group>";
+		};
+		09C326EB60666A646BF24327 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L10n.swift"; sourceTree = "<group>";
+		};
+		B11E38C2F6FF7DE30B4EAAC1 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeLimbAdapter.swift"; sourceTree = "<group>";
+		};
+		8DFCE1D4B2509B6C4B748355 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseSeries.swift"; sourceTree = "<group>";
+		};
+		742F96798AA2C4583F3B750B = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseTypes.swift"; sourceTree = "<group>";
+		};
+		54B0D1F352FF91E6812B8945 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TSTAnalyzer.swift"; sourceTree = "<group>";
+		};
+		7FD09AC0741FB8044B0F6730 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RodentStudioApp.swift"; sourceTree = "<group>";
+		};
+		64B8FD3698C6792CB1DFA4DB = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeModelCatalog.swift"; sourceTree = "<group>";
+		};
+		A05800EFAEB9200119F5735C = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkspaceStore.swift"; sourceTree = "<group>";
+		};
+		51E41ED93BCC2EB9147B4E14 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LegacyProjectInspector.swift"; sourceTree = "<group>";
+		};
+		CD76ECE628383B21B3CC4732 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView.swift"; sourceTree = "<group>";
+		};
+		4B7EF2CE172C916B8021D249 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseTrackAnalysisView.swift"; sourceTree = "<group>";
+		};
+		491500C71AAE18C7177B207D = {
+			isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RodentStudio.app; sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E307473D1315F2CA1290C215 = {
+			isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";
+		};
+		23E7C12F0A6E4127E28BA351 = {
+			isa = PBXFileReference; lastKnownFileType = archive.zip; name = "Original 0.2.0 Source (reference only)"; path = "rodent-desktop-0.2.0-source.zip"; sourceTree = "<group>";
+		};
+		ADF01B85153D86E22F903111 = {
+			isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RodentStudio.entitlements; sourceTree = "<group>";
+		};
+		AB0000010000000000000001 = {
+			isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = MousePose6_960_int8.mlpackage; sourceTree = "<group>";
+		};
+		AB0000010000000000000002 = {
+			isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = CylinderMousePoseV2.mlpackage; sourceTree = "<group>";
+		};
+		AB0000010000000000000003 = {
+			isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInferenceCheckView.swift; sourceTree = "<group>";
+		};
+		AB0000050000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoTrackingEngine.swift; sourceTree = "<group>"; };
+		AB0000050000000000000002 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoTrackingView.swift; sourceTree = "<group>"; };
+		DA0100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopAssayCatalog.swift; sourceTree = "<group>"; };
+		DA0100000000000000000002 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongVideoTrackingEngine.swift; sourceTree = "<group>"; };
+		DA0100000000000000000003 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopAssayCatalogView.swift; sourceTree = "<group>"; };
+		DA0100000000000000000004 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongVideoTrackingView.swift; sourceTree = "<group>"; };
+		FD0100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopCalibration.swift; sourceTree = "<group>"; };
+		DD1000010000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificExportService.swift; sourceTree = "<group>"; };
+		DD1000010000000000000002 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRunSession.swift; sourceTree = "<group>"; };
+		DD1000010000000000000003 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingReviewEvents.swift; sourceTree = "<group>"; };
+		DD1000010000000000000004 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewExportView.swift; sourceTree = "<group>"; };
+		EE0100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowSetupModel.swift; sourceTree = "<group>"; };
+		EE0100000000000000000002 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseGeometry.swift; sourceTree = "<group>"; };
+		EE0100000000000000000003 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseParadigms.swift; sourceTree = "<group>"; };
+		EE0100000000000000000004 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseSetupModel.swift; sourceTree = "<group>"; };
+		EE0100000000000000000005 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseZones.swift; sourceTree = "<group>"; };
+		EE0100000000000000000006 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSetup.swift; sourceTree = "<group>"; };
+		EE0100000000000000000007 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
+		EE0100000000000000000008 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisWorkflowView.swift; sourceTree = "<group>"; };
+		EE0100000000000000000009 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationControls.swift; sourceTree = "<group>"; };
+		EE010000000000000000000A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOverviewView.swift; sourceTree = "<group>"; };
+		EE010000000000000000000B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCalibrationEditor.swift; sourceTree = "<group>"; };
+		EE010000000000000000000C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimbCalibrationEditor.swift; sourceTree = "<group>"; };
+		EE010000000000000000000D = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCalibrationEditor.swift; sourceTree = "<group>"; };
+		EE010000000000000000000E = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EE010000000000000000000F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCalibrationView.swift; sourceTree = "<group>"; };
+		EE0100000000000000000010 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunViews.swift; sourceTree = "<group>"; };
+		A2CDF34A60E341BBB4201BDE = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedVideoExporter.swift; sourceTree = "<group>"; };
+		91EC7C8FA2B444D39C5C5112 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCore.swift; sourceTree = "<group>"; };
+		5CA4811B7F0640879A8BCB72 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisReport.swift; sourceTree = "<group>"; };
+		C4F391C27AC74FB49D34D004 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzersAnxiety.swift; sourceTree = "<group>"; };
+		0E5F89D6F5C047E39E32E802 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzersMemory.swift; sourceTree = "<group>"; };
+		9F52D0B70C0D442BB3E25070 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzersSocial.swift; sourceTree = "<group>"; };
+		2116FA218D3E4114BCEA3E07 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzersSpace.swift; sourceTree = "<group>"; };
+		40EE6EF362054E219CC6D082 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypoints.swift; sourceTree = "<group>"; };
+		FBF222E867A94B7283198A83 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kinematics.swift; sourceTree = "<group>"; };
+		D6BC5642C7C04B6886BBE956 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseScienceBridge.swift; sourceTree = "<group>"; };
+		489179D575EE4E32BBBBEBE7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseTrack.swift; sourceTree = "<group>"; };
+		8651E6E8760647EEA50DE9BF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPTexts.swift; sourceTree = "<group>"; };
+		1A414864B2374F3DA00AEC23 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceSession.swift; sourceTree = "<group>"; };
+		28E22969B3254D37BD097051 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDesktopRun.swift; sourceTree = "<group>"; };
+		78069BD0B5A040A8A2EE4D78 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTrackingPoint.swift; sourceTree = "<group>"; };
+		D0F6DFCB809C4155B887BAD6 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
+		24642F5AE8C1416E87BAAAAF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullVideoAnalyzer.swift; sourceTree = "<group>"; };
+		ED061E0F1F0144F29AD7660F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeMouseTracker.swift; sourceTree = "<group>"; };
+		B18DABE19C1C48AD9182C1DB = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowAssayModels.swift; sourceTree = "<group>"; };
+		E0B552EDAF4B44B08CC42BD1 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssayEngine.swift; sourceTree = "<group>"; };
+		C87B270C35174F789D0EBD26 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseScienceLongLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41CF3413A7EF156ADAAA98EC = {
+			isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DC095A7B6F04C1C9A17BC64 = {
+			isa = PBXGroup;
+			children = (
+				C8FC3751BD024D878C92B7D7 /* TSTTaskWorkspaceView.swift */,
+				9A7100000000000000000001 /* TSTSessionMetrics.swift */,
+				ED29D64AC7BA43098A4AF7A3 /* Core/CSVExport.swift */,
+				4500461C542D4F85A4B588F6 /* Core/ChamberDetector.swift */,
+				92A74C840F7C44DCA98686E1 /* Core/Detection.swift */,
+				301C8A4FC8C64184BECACC50 /* Core/GrayImage.swift */,
+				0744F0C962FE4E959FE9527B /* Core/ImageOps.swift */,
+				84FCD0E4A3F640B5AF813546 /* Core/MotionAnalyzer.swift */,
+				29B99A1013B54878B4DEB31F /* Core/Scorer.swift */,
+				23D5E309C00E49F3930F3DC8 /* Core/Settings.swift */,
+				226ED17D98F5408584B70AEA /* Model/AppModel.swift */,
+				F5A660B35A4A4CB0B9ED7689 /* Video/ImageRendering.swift */,
+				EABA446ECA5848368ED69100 /* Video/VideoFrameReader.swift */,
+				6264D15B7E1547EDABCA627A /* Detection/YOLOMouseDetector.swift */,
+				96B4D3FFC3E84383BC9F4FF7 /* Views/AnalyzingView.swift */,
+				F4B2AB34C10C4689B07617C8 /* Views/CalibrationView.swift */,
+				6ECAEA84BD7946B4A41C3923 /* Views/ChamberEditor.swift */,
+				DE3034887AFA4AE083F4DDE0 /* Views/ChambersView.swift */,
+				EF13350123E849AC80354C96 /* Views/HomeView.swift */,
+				473FE4ADEFA94B068E365B99 /* Views/KeyFrameView.swift */,
+				BE6780970405406FB9392967 /* Views/ResultsView.swift */,
+				C4C0FACE29234AAF9EA42BC1 /* Views/ScanView.swift */,
+				D627A5F00311409D8BB57E1F /* Views/TSTMultiSettingsView.swift */,
+				128AF7F78E2D42C0BB8DA4F4 /* MouseDetector.mlpackage */,
+			);
+			name = TSTMulti; path = RodentStudio/TSTMulti; sourceTree = "<group>";
+		};
+
+		08A3C3120A94C7965C6BF143 = {
+			isa = PBXGroup; children = (
+				7FD09AC0741FB8044B0F6730 /* RodentStudioApp.swift */,
+			); name = App; path = RodentStudio/App; sourceTree = "<group>";
+		};
+		AA3EC219092827357BB518CD = {
+			isa = PBXGroup; children = (
+				261CFF789A2701546E547761 /* TaskDataExport.swift */,
+				1A333D3EE3F7BCA08E983864 /* TaskDataModel.swift */,
+				E554839A1372B994C2F39125 /* SessionMetrics.swift */,
+				04B26D298867FC240CE53F7B /* SessionResultsEngine.swift */,
+				FAD15F624165554CFF6AFB40 /* GroupAnalysis.swift */,
+				D51154D7488AEF87F11B652C /* StatsEngine.swift */,
+				0F792D7748593C974778B3B5 /* SessionModel.swift */,
+				993D35B8FD3E2635BDAF86AF /* AppInfo.swift */,
+				539C0B828E835F07640BC66B /* VideoReview.swift */,
+				C87B270C35174F789D0EBD26 /* PoseScienceLongLoader.swift */,				A2CDF34A60E341BBB4201BDE /* AnnotatedVideoExporter.swift */,
+
+				FD0100000000000000000001 /* DesktopCalibration.swift */,
+				64B8FD3698C6792CB1DFA4DB /* NativeModelCatalog.swift */,
+				DA0100000000000000000002 /* LongVideoTrackingEngine.swift */,
+				DA0100000000000000000001 /* DesktopAssayCatalog.swift */,
+				AB0000050000000000000001 /* NativeVideoTrackingEngine.swift */,
+				A05800EFAEB9200119F5735C /* WorkspaceStore.swift */,
+                A06100000000000000000001 /* TaskMergePolicy.swift */,
+							DD1000010000000000000001 /* ScientificExportService.swift */,
+				DD1000010000000000000002 /* NativeRunSession.swift */,
+				DD1000010000000000000003 /* TrackingReviewEvents.swift */,
+); name = Core; path = RodentStudio/Core; sourceTree = "<group>";
+		};
+		A975C643726699C96DA1BDA1 = {
+			isa = PBXGroup; children = (
+				147E7AE9C2772ED5345AF06E /* ReviewSupport.swift */,
+				A2B0E0900CBA17E4AB9524A3 /* TaskOverviewViews.swift */,
+				E226A3A588001D4B09E05569 /* GroupCharts.swift */,
+				E831743416C55FC5AA469C37 /* TrackingCheckViews.swift */,
+				92FC52699CB634519CF67317 /* ImportVideosSheet.swift */,
+
+				68EFB61AA71A6A749BA0E110 /* TaskResultsView.swift */,
+				E06F283723B0C01870E5D732 /* FlowResultFigures.swift */,
+				7D2F799A6BF885FC03AE97BB /* LimbResultFigures.swift */,
+				6D349717E0C4A2A74F9F5DCB /* PoseResultFigures.swift */,
+				0F97E28DE2DA80192FA798BF /* FigureSupport.swift */,
+
+
+
+				EE0100000000000000000007 /* AdvancedView.swift */,
+				EE0100000000000000000008 /* AnalysisWorkflowView.swift */,
+				EE0100000000000000000009 /* CalibrationControls.swift */,
+				EE010000000000000000000A /* DataOverviewView.swift */,
+				EE010000000000000000000B /* FlowCalibrationEditor.swift */,
+				EE010000000000000000000C /* LimbCalibrationEditor.swift */,
+				EE010000000000000000000D /* PoseCalibrationEditor.swift */,
+				EE010000000000000000000E /* SettingsView.swift */,
+				EE010000000000000000000F /* TaskCalibrationView.swift */,
+				EE0100000000000000000010 /* TaskRunViews.swift */,
+				51E41ED93BCC2EB9147B4E14 /* LegacyProjectInspector.swift */,
+				CD76ECE628383B21B3CC4732 /* MainView.swift */,
+				DA0100000000000000000004 /* LongVideoTrackingView.swift */,
+				DA0100000000000000000003 /* DesktopAssayCatalogView.swift */,
+				4B7EF2CE172C916B8021D249 /* PoseTrackAnalysisView.swift */,
+				AB0000010000000000000003 /* ModelInferenceCheckView.swift */,
+				A04100000000000000000001 /* NativeTrackingVisualization.swift */,
+				AB0000050000000000000002 /* NativeVideoTrackingView.swift */,
+							DD1000010000000000000004 /* ReviewExportView.swift */,
+); name = Views; path = RodentStudio/Views; sourceTree = "<group>";
+		};
+		069991121013959075DD684E = {
+			isa = PBXGroup; children = (
+				4C32A8B16C20383049846795 /* AnalysisModels.swift */,
+				EBF6A9FE98AF4CA2CFE3B518 /* CylinderAnalyzer.swift */,
+				B2E9AA2ED6E2F03F8AD59AE0 /* GaitAnalyzer.swift */,
+				09C326EB60666A646BF24327 /* L10n.swift */,
+				B11E38C2F6FF7DE30B4EAAC1 /* NativeLimbAdapter.swift */,
+				8DFCE1D4B2509B6C4B748355 /* PoseSeries.swift */,
+				742F96798AA2C4583F3B750B /* PoseTypes.swift */,
+				54B0D1F352FF91E6812B8945 /* TSTAnalyzer.swift */,
+			); name = Analysis; path = RodentStudio/Analysis; sourceTree = "<group>";
+		};
+		EE0300000000000000000001 = {
+			isa = PBXGroup; children = (
+				EE0100000000000000000001 /* FlowSetupModel.swift */,
+				EE0100000000000000000002 /* PoseGeometry.swift */,
+				EE0100000000000000000003 /* PoseParadigms.swift */,
+				EE0100000000000000000004 /* PoseSetupModel.swift */,
+				EE0100000000000000000005 /* PoseZones.swift */,
+				EE0100000000000000000006 /* TaskSetup.swift */,
+			); name = Calibration; path = RodentStudio/Calibration; sourceTree = "<group>";
+		};
+		B75BB2CE3359C17D15E225FB = {
+			isa = PBXGroup; children = (
+				C633A448CC50D35D7A2FDEAE /* RodentFlowChinese.json */,
+				597A2413EEEE171C8B0BE10F /* L10nPatterns.json */,
+				E21F73BF0F231B6123572EB9 /* EnglishTranslations.json */,
+				E307473D1315F2CA1290C215 /* Assets.xcassets */,
+				AB0000030000000000000001 /* Models */,
+			); name = Resources; path = RodentStudio/Resources; sourceTree = "<group>";
+		};
+		A9DE6B33AE3F82EE3B6B0B92 = {
+			isa = PBXGroup; children = (
+				ADF01B85153D86E22F903111 /* RodentStudio.entitlements */,
+			); name = Config; path = RodentStudio; sourceTree = "<group>";
+		};
+		DF58FD68066FE7AC0A99B361 = {
+			isa = PBXGroup; children = (
+				23E7C12F0A6E4127E28BA351 /* Original sources */,
+			); name = "Legacy Reference (not compiled)"; path = LegacyReference; sourceTree = "<group>";
+		};
+		0478D0804B4512C1910696E3 = {
+			isa = PBXGroup; children = (
+				491500C71AAE18C7177B207D /* RodentStudio.app */,
+			); name = Products; sourceTree = "<group>";
+		};
+		F934FDAFC7FE0768D1D61EDF = {
+			isa = PBXGroup; children = (
+				2DC095A7B6F04C1C9A17BC64 /* TSTMulti */,
+				08A3C3120A94C7965C6BF143 /* App */,
+				AA3EC219092827357BB518CD /* Core */,
+				A975C643726699C96DA1BDA1 /* Views */,
+				BECC6818E6E043E29938DEEE /* SciencePose */,
+				D4607AFF4A4B44A49DD6E3D0 /* ScienceFlow */,
+				069991121013959075DD684E /* Analysis */,
+				EE0300000000000000000001 /* Calibration */,
+				B75BB2CE3359C17D15E225FB /* Resources */,
+				A9DE6B33AE3F82EE3B6B0B92 /* Config */,
+				DF58FD68066FE7AC0A99B361 /* Legacy */,
+				0478D0804B4512C1910696E3 /* Products */,
+			); sourceTree = "<group>";
+		};
+		AB0000030000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				AB0000010000000000000001 /* MousePose6_960_int8.mlpackage */,
+				AB0000010000000000000002 /* CylinderMousePoseV2.mlpackage */,
+			);
+			name = Models; path = Models; sourceTree = "<group>";
+		};
+		BECC6818E6E043E29938DEEE = {
+			isa = PBXGroup; children = (
+				91EC7C8FA2B444D39C5C5112 /* AnalysisCore.swift */,
+				5CA4811B7F0640879A8BCB72 /* AnalysisReport.swift */,
+				C4F391C27AC74FB49D34D004 /* AnalyzersAnxiety.swift */,
+				0E5F89D6F5C047E39E32E802 /* AnalyzersMemory.swift */,
+				9F52D0B70C0D442BB3E25070 /* AnalyzersSocial.swift */,
+				2116FA218D3E4114BCEA3E07 /* AnalyzersSpace.swift */,
+				40EE6EF362054E219CC6D082 /* Keypoints.swift */,
+				FBF222E867A94B7283198A83 /* Kinematics.swift */,
+				D6BC5642C7C04B6886BBE956 /* PoseScienceBridge.swift */,
+				489179D575EE4E32BBBBEBE7 /* PoseTrack.swift */,
+				8651E6E8760647EEA50DE9BF /* RPTexts.swift */,
+				1A414864B2374F3DA00AEC23 /* ScienceSession.swift */,
+			); name = SciencePose; path = RodentStudio/SciencePose; sourceTree = "<group>";
+		};
+		D4607AFF4A4B44A49DD6E3D0 = {
+			isa = PBXGroup; children = (
+				786AEE3401B150504CD46CD4 /* FlowMetricCatalog.swift */,
+				E0B552EDAF4B44B08CC42BD1 /* AssayEngine.swift */,
+				B18DABE19C1C48AD9182C1DB /* FlowAssayModels.swift */,
+				28E22969B3254D37BD097051 /* FlowDesktopRun.swift */,
+				78069BD0B5A040A8A2EE4D78 /* FlowTrackingPoint.swift */,
+				D0F6DFCB809C4155B887BAD6 /* FrameExtractor.swift */,
+				24642F5AE8C1416E87BAAAAF /* FullVideoAnalyzer.swift */,
+				ED061E0F1F0144F29AD7660F /* NativeMouseTracker.swift */,
+			); name = ScienceFlow; path = RodentStudio/ScienceFlow; sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0816A9CDB394746FD5231577 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7842A5B31B0FCB19547BB65E /* Target configuration list */;
+			buildPhases = (ECD1893E9B2B45DBC6EA564C /* Sources */, 41CF3413A7EF156ADAAA98EC /* Frameworks */, EFDAA54F5F565F47F6E2C87F /* Resources */,);
+			buildRules = ();
+			dependencies = ();
+			name = RodentStudio;
+			productName = RodentStudio;
+			productReference = 491500C71AAE18C7177B207D /* RodentStudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBBEE1F8939AC2D8BAB1AC8A = {
+			isa = PBXProject;
+			attributes = { BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = { 0816A9CDB394746FD5231577 = { CreatedOnToolsVersion = 16.0; }; }; };
+			buildConfigurationList = 86833E12B34DC3BA8DB47CC0 /* Project configuration list */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = F934FDAFC7FE0768D1D61EDF;
+			productRefGroup = 0478D0804B4512C1910696E3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (0816A9CDB394746FD5231577 /* RodentStudio */,);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFDAA54F5F565F47F6E2C87F = {
+			isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
+				D4DF9A47617DAF56DA20C307 /* RodentFlowChinese.json in Resources */,
+				6C98ACEBCB38B789244856F0 /* L10nPatterns.json in Resources */,
+				ECF61C9293A4CEB4AE2D02B5 /* EnglishTranslations.json in Resources */,F9FFCE611726574CD0162ABA /* Assets.xcassets */,); runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECD1893E9B2B45DBC6EA564C = {
+			isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				4880F03AD67604D1C159BE3B /* ReviewSupport.swift in Sources */,
+				0F37AF73A9FD40C4B1C6FE5E /* TSTTaskWorkspaceView.swift in Sources */,
+				9A7100000000000000000002 /* TSTSessionMetrics.swift in Sources */,
+				8955EBDAF7F445BC9713ABC1 /* Core/CSVExport.swift in Sources */,
+				4B1E8C01AADE41EAAD237DCD /* Core/ChamberDetector.swift in Sources */,
+				9B55C0FC2E514E7285B50B04 /* Core/Detection.swift in Sources */,
+				1227648BB31748AF990E9B60 /* Core/GrayImage.swift in Sources */,
+				6B2F96304F024AABAF9CB9B1 /* Core/ImageOps.swift in Sources */,
+				2B093856CDBB4B8AA4F59A9A /* Core/MotionAnalyzer.swift in Sources */,
+				6265CC5412F44F84A1C1B1B3 /* Core/Scorer.swift in Sources */,
+				FFA764EF790748EBBD5D8D5C /* Core/Settings.swift in Sources */,
+				A99A737B7F1B45E1A39EC1E0 /* Model/AppModel.swift in Sources */,
+				91126C05A52C4CAF83DA5A9C /* Video/ImageRendering.swift in Sources */,
+				722B1E7153FE40BF922D438A /* Video/VideoFrameReader.swift in Sources */,
+				A2DF501A22E1462F8FE953E4 /* Detection/YOLOMouseDetector.swift in Sources */,
+				1124857F2C3449BF892F1A9E /* Views/AnalyzingView.swift in Sources */,
+				5C960B4CE895485EBC1FC7B6 /* Views/CalibrationView.swift in Sources */,
+				9D999B4406CD4BC585CA36B8 /* Views/ChamberEditor.swift in Sources */,
+				7325095B9D7D4CF890392D1F /* Views/ChambersView.swift in Sources */,
+				B3E99CB1915E4E10B1045E29 /* Views/HomeView.swift in Sources */,
+				20E792988ED54F268D3C3DA5 /* Views/KeyFrameView.swift in Sources */,
+				09917B0899CA42FF9C35DB61 /* Views/ResultsView.swift in Sources */,
+				BA4A8C70D2E54645B8EAC42C /* Views/ScanView.swift in Sources */,
+				1CD021B5499E4262A30C41E8 /* Views/TSTMultiSettingsView.swift in Sources */,
+				1B6D424AC01748EC814C5985 /* MouseDetector.mlpackage */,
+				2289C0315ABB5B9A6110717C /* TaskOverviewViews.swift in Sources */,
+				54DE17F066C911358AA6D8FD /* GroupCharts.swift in Sources */,
+				79B78FC9015A2AA7A846A218 /* TrackingCheckViews.swift in Sources */,
+				A2BA1E2E61D3F8C6F4DCEE1E /* ImportVideosSheet.swift in Sources */,
+				0CC24A043C60255EAAD862B4 /* TaskDataExport.swift in Sources */,
+				4075362BE7D004A1BED5A639 /* TaskDataModel.swift in Sources */,
+				E6936E291AFC44FAFD982F75 /* SessionMetrics.swift in Sources */,
+				CBA67502EC23F4BE202F7994 /* SessionResultsEngine.swift in Sources */,
+				69F7A4F5D7F632347DE67305 /* GroupAnalysis.swift in Sources */,
+				857CCDDB4FB238A6F6C1E584 /* StatsEngine.swift in Sources */,
+				8D48DF41B8A37B726667852A /* SessionModel.swift in Sources */,
+				2852D4965D5557A4E39FFD5B /* AppInfo.swift in Sources */,
+				B93D4C1AE2BEA1943F1B8988 /* FlowMetricCatalog.swift in Sources */,
+				23CA1E32C330D4618AE23FC3 /* VideoReview.swift in Sources */,
+
+				EE1C3A407DBC7AC7F240BFB3 /* TaskResultsView.swift in Sources */,
+				2C8ADE03BEBC4C367DAA7E32 /* FlowResultFigures.swift in Sources */,
+				2AD3456DF0075E414A0AB8DE /* LimbResultFigures.swift in Sources */,
+				324297F503D027D3D5A05E76 /* PoseResultFigures.swift in Sources */,
+				CEC095E3A079D692849BC8B2 /* FigureSupport.swift in Sources */,
+				48405835BB354F638E093189 /* PoseScienceLongLoader.swift in Sources */,
+
+				504A093E53024E43A6158F74 /* AssayEngine.swift in Sources */,
+				383BAD1CAA5B4842815267D9 /* FlowAssayModels.swift in Sources */,
+
+				C49E87A372C34A6997AC15EF /* AnnotatedVideoExporter.swift in Sources */,
+				2A40A6186B5A4F0E8C64DE37 /* AnalysisCore.swift in Sources */,
+				99A948E1121048818D6142B2 /* AnalysisReport.swift in Sources */,
+				7C41953F8D8D4EF68B54CC80 /* AnalyzersAnxiety.swift in Sources */,
+				47D0C6602E9E4B928BF6089C /* AnalyzersMemory.swift in Sources */,
+				A7DA2892D14B474C8B6112BF /* AnalyzersSocial.swift in Sources */,
+				1E446AF95D6B49C1AD5FD819 /* AnalyzersSpace.swift in Sources */,
+				389ECDBD5DBB4EA89B3F745B /* Keypoints.swift in Sources */,
+				4E6022AF203A4FA88C51F9AB /* Kinematics.swift in Sources */,
+				BFA17699529748F385A371D5 /* PoseScienceBridge.swift in Sources */,
+				194B927E11774C56B3FCF32C /* PoseTrack.swift in Sources */,
+				7A7003C2F563422EBC368DFD /* RPTexts.swift in Sources */,
+				5B50B3AAC96C4AE38CDC90E9 /* ScienceSession.swift in Sources */,
+				79D3770D92BA4EE0B6786BE4 /* FlowDesktopRun.swift in Sources */,
+				5E09F9F19617494BB09C6BD7 /* FlowTrackingPoint.swift in Sources */,
+				817B8CB123F04430A0479D08 /* FrameExtractor.swift in Sources */,
+				D5A6D1407CDA49A59A3787B2 /* FullVideoAnalyzer.swift in Sources */,
+				4822B444E6F34D06A42BDA10 /* NativeMouseTracker.swift in Sources */,
+
+				A04100000000000000000002 /* NativeTrackingVisualization.swift in Sources */,
+				EE0200000000000000000001 /* FlowSetupModel.swift in Sources */,
+				EE0200000000000000000002 /* PoseGeometry.swift in Sources */,
+				EE0200000000000000000003 /* PoseParadigms.swift in Sources */,
+				EE0200000000000000000004 /* PoseSetupModel.swift in Sources */,
+				EE0200000000000000000005 /* PoseZones.swift in Sources */,
+				EE0200000000000000000006 /* TaskSetup.swift in Sources */,
+				EE0200000000000000000007 /* AdvancedView.swift in Sources */,
+				EE0200000000000000000008 /* AnalysisWorkflowView.swift in Sources */,
+				EE0200000000000000000009 /* CalibrationControls.swift in Sources */,
+				EE020000000000000000000A /* DataOverviewView.swift in Sources */,
+				EE020000000000000000000B /* FlowCalibrationEditor.swift in Sources */,
+				EE020000000000000000000C /* LimbCalibrationEditor.swift in Sources */,
+				EE020000000000000000000D /* PoseCalibrationEditor.swift in Sources */,
+				EE020000000000000000000E /* SettingsView.swift in Sources */,
+				EE020000000000000000000F /* TaskCalibrationView.swift in Sources */,
+				EE0200000000000000000010 /* TaskRunViews.swift in Sources */,
+				FD0200000000000000000001 /* DesktopCalibration.swift */,
+				5F96C5D0F63C546372C86DF6 /* AnalysisModels.swift */,
+				286C39BB55F8A6710DDB862F /* CylinderAnalyzer.swift */,
+				C5E2A9D414407D75BA265529 /* GaitAnalyzer.swift */,
+				9602A25012B7B61D6B72BDB1 /* L10n.swift */,
+				32BE23F1E0F9799977A235F0 /* NativeLimbAdapter.swift */,
+				EA56931719E9AC5DCA97BE2B /* PoseSeries.swift */,
+				7CACEB5D1D44B10644442076 /* PoseTypes.swift */,
+				3AB0D8CE139310D06DDE3BBB /* TSTAnalyzer.swift */,
+				9D75C2C208DEF7495DFAE3AC /* RodentStudioApp.swift */,
+				8962CABB5BB3CC41CC887E84 /* NativeModelCatalog.swift */,
+				41D511C05B9A0EE1E679CD1E /* WorkspaceStore.swift */,
+                A06100000000000000000002 /* TaskMergePolicy.swift in Sources */,
+				51BFA06B84C45195B6D61739 /* LegacyProjectInspector.swift */,
+				6B8FB28AA5CAD119B53F69A2 /* MainView.swift */,
+				D7D7CAEE9F5F230F8E51A085 /* PoseTrackAnalysisView.swift */,
+				AB0000020000000000000003 /* ModelInferenceCheckView.swift */,
+				AB0000040000000000000001 /* NativeVideoTrackingEngine.swift */,
+				AB0000040000000000000002 /* NativeVideoTrackingView.swift */,
+				DA0200000000000000000004 /* LongVideoTrackingView.swift */,
+				DA0200000000000000000003 /* DesktopAssayCatalogView.swift */,
+				DA0200000000000000000002 /* LongVideoTrackingEngine.swift */,
+				DA0200000000000000000001 /* DesktopAssayCatalog.swift */,
+				AB0000020000000000000001 /* MousePose6_960_int8.mlpackage */,
+				AB0000020000000000000002 /* CylinderMousePoseV2.mlpackage */,
+				DD2000010000000000000001 /* ScientificExportService.swift */,
+				DD2000010000000000000002 /* NativeRunSession.swift */,
+				DD2000010000000000000003 /* TrackingReviewEvents.swift */,
+				DD2000010000000000000004 /* ReviewExportView.swift */,
+			); runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		647FA2C669A2D457F08FF41C = {
+			isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+			}; name = Debug;
+		};
+		7FB90A692C6B5A393729A86A = {
+			isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+			}; name = Release;
+		};
+		7F7829EFEB57AC941CD0E1B0 = {
+			isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RodentStudio/RodentStudio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Y62DWN7RS;
+				CURRENT_PROJECT_VERSION = 8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RodentStudio;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziqingshi.RodentStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			}; name = Debug;
+		};
+		C007D394CDDF51DCB3C0E13D = {
+			isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RodentStudio/RodentStudio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Y62DWN7RS;
+				CURRENT_PROJECT_VERSION = 8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RodentStudio;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziqingshi.RodentStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			}; name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86833E12B34DC3BA8DB47CC0 = {
+			isa = XCConfigurationList; buildConfigurations = (647FA2C669A2D457F08FF41C /* Debug */, 7FB90A692C6B5A393729A86A /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;
+		};
+		7842A5B31B0FCB19547BB65E = {
+			isa = XCConfigurationList; buildConfigurations = (7F7829EFEB57AC941CD0E1B0 /* Debug */, C007D394CDDF51DCB3C0E13D /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBBEE1F8939AC2D8BAB1AC8A /* Project object */;
+}
