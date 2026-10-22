@@ -1,0 +1,39 @@
+name: "Assay or feature request · 新范式 / 功能建议"
+description: "Suggest a new assay, metric, export or improvement · 建议新的范式、指标、导出格式或改进"
+title: "[Request] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us how you run the experiment today — it helps us build the right thing.
+        告诉我们你现在是怎么做这个实验的，这能帮助我们做出真正好用的功能。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: "Type · 类型"
+      options:
+        - "New assay · 新范式"
+        - "New metric for an existing assay · 现有范式的新指标"
+        - "Export or statistics · 导出或统计"
+        - "Workflow or interface · 流程或界面"
+        - "Other · 其他"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: "What would you like? · 你希望增加什么？"
+      placeholder: "e.g. Marble burying: count buried marbles from a top-down video · 例如：埋珠实验，从俯拍视频统计被埋的玻璃珠数量"
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: "Your setup · 你的实验装置"
+      description: "Camera angle, arena, frame rate, video length, species/strain · 拍摄角度、场地、帧率、视频时长、物种/品系"
+  - type: textarea
+    id: reference
+    attributes:
+      label: "Reference protocol or paper · 参考方案或文献"
+      description: "Optional · 可选"
