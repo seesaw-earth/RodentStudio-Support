@@ -1,8 +1,8 @@
-# Maintaining the RodentStudio support website
+# Maintaining the RodentFlow support website
 
 ← [Back to README](README.md)
 
-Static bilingual (English / 简体中文) website for the macOS RodentStudio application, designed to be hosted on GitHub Pages. It contains public **Support URL**, **Privacy Policy URL**, product overview, guide, FAQ, legal notices, accessibility feedback, and release notes.
+Static bilingual (English / 简体中文) website for the macOS RodentFlow application, designed to be hosted on GitHub Pages. It contains public **Support URL**, **Privacy Policy URL**, product overview, guide, FAQ, legal notices, accessibility feedback, and release notes.
 
 ## GitHub Pages URL after deployment
 
@@ -23,7 +23,7 @@ cd ~/Downloads/RodentStudio-Support
 gh auth status
 git init -b main
 git add .
-git commit -m "Create RodentStudio macOS support website"
+git commit -m "Create RodentFlow macOS support website"
 gh repo create seesaw-earth/RodentStudio-Support --public --source=. --remote=origin --push
 ```
 

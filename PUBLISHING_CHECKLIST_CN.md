@@ -1,4 +1,4 @@
-# RodentStudio 官网与 Mac App Store 发布核对表
+# RodentFlow 官网与 Mac App Store 发布核对表
 
 ## 已包含
 
@@ -37,7 +37,7 @@ cd ~/Downloads/RodentStudio-Support
 gh auth status
 git init -b main
 git add .
-git commit -m "Create RodentStudio support pages"
+git commit -m "Create RodentFlow support pages"
 gh repo create seesaw-earth/RodentStudio-Support --public --source=. --remote=origin --push
 ```
 

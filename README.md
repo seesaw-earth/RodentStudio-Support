@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/github-banner.png" alt="RodentStudio — rodent behavior video analysis for Mac, iPhone and iPad" width="100%">
+  <img src="assets/github-banner.png" alt="RodentFlow — rodent behavior video analysis for Mac, iPhone and iPad" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://testflight.apple.com/join/8e6r8Dc4"><img src="https://img.shields.io/badge/TestFlight-public%20beta-0D96F6?logo=apple&amp;logoColor=white" alt="Public beta on TestFlight"></a>
+  <a href="https://testflight.apple.com/join/dU24jGY7"><img src="https://img.shields.io/badge/TestFlight-public%20beta-0D96F6?logo=apple&amp;logoColor=white" alt="Public beta on TestFlight"></a>
   <img src="https://img.shields.io/badge/macOS-14%2B-12304A" alt="macOS 14 or later">
   <img src="https://img.shields.io/badge/iOS%20%2F%20iPadOS-17%2B-12304A" alt="iOS and iPadOS 17 or later">
   <img src="https://img.shields.io/badge/Swift-SwiftUI-F05138?logo=swift&amp;logoColor=white" alt="Swift and SwiftUI">
@@ -13,21 +13,21 @@
 <p align="center">
   <a href="https://seesaw-earth.github.io/RodentStudio-Support/"><b>Website</b></a> ·
   <a href="https://seesaw-earth.github.io/RodentStudio-Support/guide.html"><b>User guide</b></a> ·
-  <a href="https://testflight.apple.com/join/8e6r8Dc4"><b>Join the beta</b></a> ·
+  <a href="https://testflight.apple.com/join/dU24jGY7"><b>Join the beta</b></a> ·
   <a href="https://seesaw-earth.github.io/RodentStudio-Support/support.html"><b>Support</b></a> ·
   <a href="README.zh-CN.md"><b>简体中文</b></a>
 </p>
 
 ---
 
-**RodentStudio** analyses your own videos of laboratory rodents on your own device. Import a video, calibrate the arena, run tracking, review the result and export structured data — no code, no Python, no account and no upload. The Core ML models ship inside the app.
+**RodentFlow** analyses your own videos of laboratory rodents on your own device. Import a video, calibrate the arena, run tracking, review the result and export structured data — no code, no Python, no account and no upload. The Core ML models ship inside the app.
 
 ## 🧪 Public beta on TestFlight
 
 The Mac app is open for public testing.
 
 1. Install Apple's free **TestFlight** app from the Mac App Store.
-2. Open the invite on your Mac: **<https://testflight.apple.com/join/8e6r8Dc4>**, then choose **Accept** and **Install**.
+2. Open the invite on your Mac: **<https://testflight.apple.com/join/dU24jGY7>**, then choose **Accept** and **Install**.
 3. Try it on your own recordings and use **Send Beta Feedback** in TestFlight, or [open an issue](https://github.com/seesaw-earth/RodentStudio-Support/issues/new/choose).
 
 > Beta builds can be unstable. Keep backups of your original videos and exported data.
@@ -70,7 +70,7 @@ Details: [Privacy policy](https://seesaw-earth.github.io/RodentStudio-Support/pr
 
 ## Requirements
 
-| | RodentStudio for Mac | RodentStudio Mobile |
+| | RodentFlow for Mac | RodentFlow Mobile |
 | --- | --- | --- |
 | **System** | macOS 14 Sonoma or later (Apple silicon recommended) | iOS / iPadOS 17 or later |
 | **Best for** | Whole studies: many animals, groups, repeated sessions, statistics and bulk export | Quick single-video analysis at the bench, teaching |
@@ -102,4 +102,4 @@ Questions and bug reports go to [Issues](https://github.com/seesaw-earth/RodentS
 
 The app source code in [`source/`](source/) is released under the **GNU AGPL-3.0** — see each project's `LICENSE`; third-party and model notes are in the project folders (for example [THIRD_PARTY_NOTICES.md](source/iOS/RodentStudio-Mobile-iOS/THIRD_PARTY_NOTICES.md)). © 2026 Ziqing Shi.
 
-> **Research note:** RodentStudio is a research aid, not a diagnostic tool. Its metrics are algorithmic estimates; validate them against manual scoring on your own setup before drawing scientific conclusions.
+> **Research note:** RodentFlow is a research aid, not a diagnostic tool. Its metrics are algorithmic estimates; validate them against manual scoring on your own setup before drawing scientific conclusions.

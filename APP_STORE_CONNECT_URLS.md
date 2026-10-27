@@ -1,10 +1,10 @@
-# RodentStudio — App Store Connect URLs
+# RodentFlow — App Store Connect URLs
 
 **Not yet live; publish the GitHub Pages repository first.**
 
 | App Store Connect field | Value |
 | --- | --- |
-| App name | RodentStudio |
+| App name | RodentFlow |
 | Platform | macOS |
 | Marketing URL | https://seesaw-earth.github.io/RodentStudio-Support/ |
 | Support URL | https://seesaw-earth.github.io/RodentStudio-Support/support.html |

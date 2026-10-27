@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/github-banner.png" alt="RodentStudio：适用于 Mac、iPhone 和 iPad 的小鼠行为视频分析" width="100%">
+  <img src="assets/github-banner.png" alt="RodentFlow：适用于 Mac、iPhone 和 iPad 的小鼠行为视频分析" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://testflight.apple.com/join/8e6r8Dc4"><img src="https://img.shields.io/badge/TestFlight-%E5%85%AC%E5%BC%80%E5%86%85%E6%B5%8B-0D96F6?logo=apple&amp;logoColor=white" alt="TestFlight 公开内测"></a>
+  <a href="https://testflight.apple.com/join/dU24jGY7"><img src="https://img.shields.io/badge/TestFlight-%E5%85%AC%E5%BC%80%E5%86%85%E6%B5%8B-0D96F6?logo=apple&amp;logoColor=white" alt="TestFlight 公开内测"></a>
   <img src="https://img.shields.io/badge/macOS-14%2B-12304A" alt="macOS 14 或更新">
   <img src="https://img.shields.io/badge/iOS%20%2F%20iPadOS-17%2B-12304A" alt="iOS / iPadOS 17 或更新">
   <img src="https://img.shields.io/badge/Swift-SwiftUI-F05138?logo=swift&amp;logoColor=white" alt="Swift 与 SwiftUI">
@@ -13,21 +13,21 @@
 <p align="center">
   <a href="https://seesaw-earth.github.io/RodentStudio-Support/zh/"><b>官网</b></a> ·
   <a href="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html"><b>使用指南</b></a> ·
-  <a href="https://testflight.apple.com/join/8e6r8Dc4"><b>加入内测</b></a> ·
+  <a href="https://testflight.apple.com/join/dU24jGY7"><b>加入内测</b></a> ·
   <a href="https://seesaw-earth.github.io/RodentStudio-Support/zh/support.html"><b>获取支持</b></a> ·
   <a href="README.md"><b>English</b></a>
 </p>
 
 ---
 
-**RodentStudio** 在你自己的设备上分析你自己拍摄的实验啮齿类视频。导入视频、校准场地、运行追踪、复核结果、导出结构化数据——不用写代码，不需要 Python、账号或联网，视频也不会上传。Core ML 模型已内置在 App 中。
+**RodentFlow** 在你自己的设备上分析你自己拍摄的实验啮齿类视频。导入视频、校准场地、运行追踪、复核结果、导出结构化数据——不用写代码，不需要 Python、账号或联网，视频也不会上传。Core ML 模型已内置在 App 中。
 
 ## 🧪 TestFlight 公开内测
 
 Mac 版现已开放公开测试。
 
 1. 在 Mac 的 App Store 免费下载 Apple 的 **TestFlight**。
-2. 在 Mac 上打开邀请链接：**<https://testflight.apple.com/join/8e6r8Dc4>**，点“接受”再点“安装”。
+2. 在 Mac 上打开邀请链接：**<https://testflight.apple.com/join/dU24jGY7>**，点“接受”再点“安装”。
 3. 用自己的视频试一试，在 TestFlight 里点“发送 Beta 版反馈”，或[提交 Issue](https://github.com/seesaw-earth/RodentStudio-Support/issues/new/choose)。
 
 > 测试版可能不稳定，请备份原始视频与导出数据。
@@ -70,7 +70,7 @@ Mac 版现已开放公开测试。
 
 ## 系统要求
 
-| | RodentStudio（Mac 版） | RodentStudio Mobile（iPhone / iPad） |
+| | RodentFlow（Mac 版） | RodentFlow Mobile（iPhone / iPad） |
 | --- | --- | --- |
 | **系统** | macOS 14 Sonoma 或更新（推荐 Apple 芯片） | iOS / iPadOS 17 或更新 |
 | **适合** | 完整课题：多只动物、多个分组、多次实验、统计和批量导出 | 单段视频快速分析、实验台旁检查、教学演示 |
@@ -102,4 +102,4 @@ Mac 版现已开放公开测试。
 
 [`source/`](source/) 中的 App 源码以 **GNU AGPL-3.0** 发布，详见各项目的 `LICENSE`；第三方组件与模型说明见项目文件夹（例如 [THIRD_PARTY_NOTICES.md](source/iOS/RodentStudio-Mobile-iOS/THIRD_PARTY_NOTICES.md)）。© 2026 Ziqing Shi。
 
-> **科研提示：** RodentStudio 是科研辅助工具，不是诊断工具。其指标是算法估计，请先在自己的装置上与人工评分对比验证，再得出科研结论。
+> **科研提示：** RodentFlow 是科研辅助工具，不是诊断工具。其指标是算法估计，请先在自己的装置上与人工评分对比验证，再得出科研结论。
