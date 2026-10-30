@@ -1,10 +1,10 @@
 blank_issues_enabled: true
 contact_links:
   - name: "User guide · 使用指南"
-    url: https://seesaw-earth.github.io/RodentStudio-Support/guide.html
+    url: https://seesaw-earth.github.io/RodentFlow/guide/editions.html
     about: "Recording tips, calibration, tracking, review and exports · 拍摄、标定、追踪、复核与导出"
   - name: "FAQ · 常见问题"
-    url: https://seesaw-earth.github.io/RodentStudio-Support/faq.html
+    url: https://seesaw-earth.github.io/RodentFlow/reference/faq.html#mac
     about: "Files, privacy, models and research use · 文件、隐私、模型与科研使用"
   - name: "Join the TestFlight beta · 加入 TestFlight 内测"
     url: https://testflight.apple.com/join/dU24jGY7

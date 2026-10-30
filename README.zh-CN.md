@@ -11,14 +11,17 @@
 </p>
 
 <p align="center">
-  <a href="https://seesaw-earth.github.io/RodentStudio-Support/zh/"><b>官网</b></a> ·
-  <a href="https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html"><b>使用指南</b></a> ·
+  <a href="https://seesaw-earth.github.io/RodentFlow/zh/"><b>官网</b></a> ·
+  <a href="https://seesaw-earth.github.io/RodentFlow/zh/guide/editions.html"><b>使用指南</b></a> ·
   <a href="https://testflight.apple.com/join/dU24jGY7"><b>加入内测</b></a> ·
-  <a href="https://seesaw-earth.github.io/RodentStudio-Support/zh/support.html"><b>获取支持</b></a> ·
+  <a href="https://seesaw-earth.github.io/RodentFlow/zh/support.html"><b>获取支持</b></a> ·
   <a href="README.md"><b>English</b></a>
 </p>
 
 ---
+
+> [!NOTE]
+> **网站已迁移到 <https://seesaw-earth.github.io/RodentFlow/zh/>。**本仓库的网页现在会自动跳转过去，使用指南、常见问题、支持和隐私政策都已并入 RodentFlow 手册。源代码仍在本仓库的 [`source/`](source/) 中。
 
 **RodentFlow** 在你自己的设备上分析你自己拍摄的实验啮齿类视频。导入视频、校准场地、运行追踪、复核结果、导出结构化数据——不用写代码，不需要 Python、账号或联网，视频也不会上传。Core ML 模型已内置在 App 中。
 
@@ -50,7 +53,7 @@ Mac 版现已开放公开测试。
 | **RodentFlow** | 经典质心追踪，10 Hz · Mac | Morris 水迷宫 · 条件性位置偏好 · 以及旷场、高架十字迷宫、明暗箱、Y 迷宫、T 迷宫、新物体识别、Barnes 迷宫、恐惧条件化的位置版本 |
 | **多格悬尾实验** | 格子检测 + 逐格运动评分 · Mac | 一段录像中并排悬挂的多只小鼠同时评分 |
 
-各范式的标定方法和指标见[实验范式速查](https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html#assays)。
+各范式的标定方法和指标见[实验范式速查](https://seesaw-earth.github.io/RodentFlow/zh/assays/pose.html)。
 
 ## 让结果经得起检验
 
@@ -66,7 +69,7 @@ Mac 版现已开放公开测试。
 - 没有广告，也没有开发者运营的数据统计。
 - 原始视频只读取、不修改。
 
-详见[隐私政策](https://seesaw-earth.github.io/RodentStudio-Support/zh/privacy.html)。
+详见[隐私政策](https://seesaw-earth.github.io/RodentFlow/zh/privacy.html)。
 
 ## 系统要求
 
@@ -92,7 +95,7 @@ Mac 版现已开放公开测试。
 
 ### 从源码编译
 
-在 Xcode 中打开对应平台的 `.xcodeproj`，选择你自己的开发团队进行签名后编译。Core ML 模型使用 **Git LFS** 存储，克隆后请运行 `git lfs pull`。详见 [source/README.md](source/README.md) 与[从源码编译](https://seesaw-earth.github.io/RodentStudio-Support/zh/guide.html#build)。
+在 Xcode 中打开对应平台的 `.xcodeproj`，选择你自己的开发团队进行签名后编译。Core ML 模型使用 **Git LFS** 存储，克隆后请运行 `git lfs pull`。详见 [source/README.md](source/README.md) 与[从源码编译](https://seesaw-earth.github.io/RodentFlow/zh/guide/editions.html#build)。
 
 ## 获取支持
 

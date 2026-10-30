@@ -1,16 +1,18 @@
 # Maintaining the RodentFlow support website
 
+> **Moved.** The website now lives in the [RodentFlow repository](https://github.com/seesaw-earth/RodentFlow) (folder `docs/`) and is published at https://seesaw-earth.github.io/RodentFlow/. The HTML pages in this repository only redirect there; edit the manual in the RodentFlow repository instead. The rest of this file describes the original setup.
+
 ← [Back to README](README.md)
 
 Static bilingual (English / 简体中文) website for the macOS RodentFlow application, designed to be hosted on GitHub Pages. It contains public **Support URL**, **Privacy Policy URL**, product overview, guide, FAQ, legal notices, accessibility feedback, and release notes.
 
 ## GitHub Pages URL after deployment
 
-- Marketing / Product: https://seesaw-earth.github.io/RodentStudio-Support/
-- Support URL: https://seesaw-earth.github.io/RodentStudio-Support/support.html
-- Privacy Policy URL: https://seesaw-earth.github.io/RodentStudio-Support/privacy.html
-- Chinese support: https://seesaw-earth.github.io/RodentStudio-Support/zh/support.html
-- Chinese privacy: https://seesaw-earth.github.io/RodentStudio-Support/zh/privacy.html
+- Marketing / Product: https://seesaw-earth.github.io/RodentFlow/
+- Support URL: https://seesaw-earth.github.io/RodentFlow/support.html
+- Privacy Policy URL: https://seesaw-earth.github.io/RodentFlow/privacy.html
+- Chinese support: https://seesaw-earth.github.io/RodentFlow/zh/support.html
+- Chinese privacy: https://seesaw-earth.github.io/RodentFlow/zh/privacy.html
 
 **URLs become valid only after you deploy GitHub Pages successfully.** Do not enter an unverified URL in App Store Connect.
 
