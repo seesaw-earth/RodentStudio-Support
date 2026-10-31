@@ -24,8 +24,8 @@
 ## 关键链接
 
 - GitHub 预定仓库：https://github.com/seesaw-earth/RodentStudio-Support
-- 英文支持 URL：https://seesaw-earth.github.io/RodentStudio-Support/support.html
-- 英文隐私 URL：https://seesaw-earth.github.io/RodentStudio-Support/privacy.html
+- 英文支持 URL：https://seesaw-earth.github.io/RodentFlow/support.html
+- 英文隐私 URL：https://seesaw-earth.github.io/RodentFlow/privacy.html
 - App Store 隐私官方说明：https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy
 
 ## 上传和发布

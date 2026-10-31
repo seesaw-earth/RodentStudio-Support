@@ -11,14 +11,17 @@
 </p>
 
 <p align="center">
-  <a href="https://seesaw-earth.github.io/RodentStudio-Support/"><b>Website</b></a> ·
-  <a href="https://seesaw-earth.github.io/RodentStudio-Support/guide.html"><b>User guide</b></a> ·
+  <a href="https://seesaw-earth.github.io/RodentFlow/"><b>Website</b></a> ·
+  <a href="https://seesaw-earth.github.io/RodentFlow/guide/editions.html"><b>User guide</b></a> ·
   <a href="https://testflight.apple.com/join/dU24jGY7"><b>Join the beta</b></a> ·
-  <a href="https://seesaw-earth.github.io/RodentStudio-Support/support.html"><b>Support</b></a> ·
+  <a href="https://seesaw-earth.github.io/RodentFlow/support.html"><b>Support</b></a> ·
   <a href="README.zh-CN.md"><b>简体中文</b></a>
 </p>
 
 ---
+
+> [!NOTE]
+> **The website has moved to <https://seesaw-earth.github.io/RodentFlow/>.** The pages of this repository now redirect there, and the user guide, FAQ, support and privacy pages are part of the RodentFlow manual. The source code stays here, in [`source/`](source/).
 
 **RodentFlow** analyses your own videos of laboratory rodents on your own device. Import a video, calibrate the arena, run tracking, review the result and export structured data — no code, no Python, no account and no upload. The Core ML models ship inside the app.
 
@@ -50,7 +53,7 @@ The Mac app is open for public testing.
 | **RodentFlow** | Classic centroid tracking, 10 Hz · Mac | Morris Water Maze · Conditioned Place Preference · plus position-based versions of Open Field, Elevated Plus Maze, Light–Dark Box, Y-Maze, T-Maze, Novel Object Recognition, Barnes Maze and Fear Conditioning |
 | **TST multi-chamber** | Chamber detection + per-chamber motion · Mac | Several mice scored side by side from one tail-suspension recording |
 
-Full calibration and metric details: [Assay reference](https://seesaw-earth.github.io/RodentStudio-Support/guide.html#assays).
+Full calibration and metric details: [Assay reference](https://seesaw-earth.github.io/RodentFlow/assays/pose.html).
 
 ## Built for results you can defend
 
@@ -66,7 +69,7 @@ Full calibration and metric details: [Assay reference](https://seesaw-earth.gith
 - No ads and no developer-run analytics.
 - Original videos are read in place and never modified.
 
-Details: [Privacy policy](https://seesaw-earth.github.io/RodentStudio-Support/privacy.html).
+Details: [Privacy policy](https://seesaw-earth.github.io/RodentFlow/privacy.html).
 
 ## Requirements
 
@@ -92,7 +95,7 @@ Details: [Privacy policy](https://seesaw-earth.github.io/RodentStudio-Support/pr
 
 ### Build from source
 
-Open the `.xcodeproj` for your platform in Xcode, pick your own development team for signing, and build. Core ML models are stored with **Git LFS** — run `git lfs pull` after cloning. See [source/README.md](source/README.md) and [Building from source](https://seesaw-earth.github.io/RodentStudio-Support/guide.html#build).
+Open the `.xcodeproj` for your platform in Xcode, pick your own development team for signing, and build. Core ML models are stored with **Git LFS** — run `git lfs pull` after cloning. See [source/README.md](source/README.md) and [Building from source](https://seesaw-earth.github.io/RodentFlow/guide/editions.html#build).
 
 ## Support
 

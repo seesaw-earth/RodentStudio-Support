@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://seesaw-earth.github.io/RodentStudio-Support/sitemap.xml
